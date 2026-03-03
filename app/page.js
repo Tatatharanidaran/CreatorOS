@@ -75,7 +75,7 @@ export default function Home() {
         <div className="pillars">
           <span>Fast drafts</span>
           <span>Structured outputs</span>
-          <span>Local Ollama AI</span>
+          <span>Free API powered</span>
         </div>
       </section>
 

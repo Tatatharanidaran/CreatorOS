@@ -10,10 +10,7 @@ It generates in one run:
 
 Built with:
 - Next.js (App Router)
-- Local Ollama models (no paid API)
-
-## Why this exists
-Small creators do not need enterprise tooling. They need quick, structured outputs they can copy and post.
+- Groq API (free tier)
 
 ## Quick start (one command)
 
@@ -25,30 +22,40 @@ chmod +x run_project.sh
 What this script does:
 - Installs `nvm` if missing
 - Installs and uses Node 20 LTS
-- Tries to install Ollama if missing
 - Creates `.env` from `.env.example`
+- Prompts for your `GROQ_API_KEY` (if missing)
 - Installs npm dependencies
-- Starts Ollama server (if not already running)
-- Pulls model `llama3.2:3b` (or `OLLAMA_MODEL`)
+- Clears stale `.next`
 - Starts Next.js dev server at `http://localhost:3000`
 
-If automatic Ollama install fails, install it manually from `https://ollama.com/download` and re-run.
+## Create Groq API key
+
+1. Go to `https://console.groq.com/keys`
+2. Create a new API key
+3. Copy the key
+4. Add it in `.env`:
+
+```env
+GROQ_API_KEY=your_key_here
+GROQ_MODEL=llama-3.1-8b-instant
+```
+
+The `run_project.sh` script can ask for this key and write it into `.env` automatically.
 
 ## Deploy to Vercel
 
-Important:
-- Vercel cannot use Ollama running on your laptop `localhost`.
-- For production, host Ollama on a reachable server/VPS and use that URL.
-
-### Steps
-1. Push this repo to GitHub.
+1. Push repo to GitHub.
 2. Import the repo in Vercel.
-3. Set environment variables in Vercel Project Settings:
-   - `OLLAMA_URL=https://your-public-ollama-host`
-   - `OLLAMA_MODEL=llama3.2:3b`
+3. Set Environment Variables in Vercel:
+   - `GROQ_API_KEY=your_key_here`
+   - `GROQ_MODEL=llama-3.1-8b-instant` (or any supported Groq model)
 4. Deploy.
 
-If `OLLAMA_URL` is missing in production, the API route now returns a clear configuration error.
+Vercel project settings:
+- Root Directory: `Insta_Cont` (if your app lives in that subfolder)
+- Install Command: `npm install`
+- Build Command: `npm run build`
+- Output Directory: leave empty
 
 ## Input
 - image description (1-2 sentences)
@@ -84,7 +91,3 @@ Request body:
   "contentType": "Reel | Post | Carousel"
 }
 ```
-
-## Notes
-- If JSON parsing fails on weaker models, retry once or switch model.
-- Default model is `llama3.2:3b`, configurable via `OLLAMA_MODEL`.

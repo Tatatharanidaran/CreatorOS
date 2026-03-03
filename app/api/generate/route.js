@@ -4,21 +4,9 @@ export const runtime = 'nodejs';
 export const maxDuration = 60;
 export const dynamic = 'force-dynamic';
 
-const DEFAULT_MODEL = process.env.OLLAMA_MODEL || 'llama3.2:3b';
+const DEFAULT_MODEL = process.env.GROQ_MODEL || 'llama-3.1-8b-instant';
+const GROQ_BASE_URL = (process.env.GROQ_BASE_URL || 'https://api.groq.com').replace(/\/+$/, '');
 const REQUEST_TIMEOUT_MS = 45000;
-
-function getOllamaUrl() {
-  const configured = process.env.OLLAMA_URL?.trim();
-  if (configured) {
-    return configured.replace(/\/+$/, '');
-  }
-
-  if (process.env.NODE_ENV === 'production') {
-    return null;
-  }
-
-  return 'http://localhost:11434';
-}
 
 function safeJsonParse(text) {
   try {
@@ -53,12 +41,11 @@ function normalizeOutput(data) {
 
 export async function POST(request) {
   try {
-    const ollamaUrl = getOllamaUrl();
-    if (!ollamaUrl) {
+    if (!process.env.GROQ_API_KEY) {
       return Response.json(
         {
           error:
-            'Missing OLLAMA_URL in production. Set OLLAMA_URL to a public/reachable Ollama server URL in your deployment environment.'
+            'Missing GROQ_API_KEY. Add GROQ_API_KEY in your local .env or in Vercel Environment Variables.'
         },
         { status: 500 }
       );
@@ -74,42 +61,44 @@ export async function POST(request) {
       );
     }
 
-    const prompt = buildUserPrompt({ imageDescription, niche, tone, contentType });
+    const userPrompt = buildUserPrompt({ imageDescription, niche, tone, contentType });
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
 
-    const ollamaResponse = await fetch(`${ollamaUrl}/api/generate`, {
+    const groqResponse = await fetch(`${GROQ_BASE_URL}/openai/v1/chat/completions`, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${process.env.GROQ_API_KEY}`
+      },
       body: JSON.stringify({
         model: DEFAULT_MODEL,
-        system: SYSTEM_PROMPT,
-        prompt,
-        stream: false,
-        options: {
-          temperature: 0.8,
-          top_p: 0.9
-        }
+        messages: [
+          { role: 'system', content: SYSTEM_PROMPT },
+          { role: 'user', content: userPrompt }
+        ],
+        response_format: { type: 'json_object' },
+        temperature: 0.8,
+        max_completion_tokens: 900,
+        stream: false
       }),
       signal: controller.signal
     }).finally(() => clearTimeout(timeoutId));
 
-    if (!ollamaResponse.ok) {
-      const errorText = await ollamaResponse.text();
-      return Response.json(
-        { error: `Ollama request failed: ${errorText}` },
-        { status: ollamaResponse.status }
-      );
+    if (!groqResponse.ok) {
+      const errorText = await groqResponse.text();
+      return Response.json({ error: `Groq request failed: ${errorText}` }, { status: groqResponse.status });
     }
 
-    const payload = await ollamaResponse.json();
-    const parsed = safeJsonParse(payload?.response || '');
+    const payload = await groqResponse.json();
+    const content = payload?.choices?.[0]?.message?.content || '';
+    const parsed = safeJsonParse(content);
 
     if (!parsed) {
       return Response.json(
         {
           error: 'Model returned invalid JSON. Try again or switch model.',
-          raw: payload?.response || ''
+          raw: content
         },
         { status: 422 }
       );

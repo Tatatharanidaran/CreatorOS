@@ -32,7 +32,7 @@ Build a fast Instagram caption assistant for small creators that turns a short p
 - Structured output blocks for hooks/captions/CTAs/hashtags
 - Multi-variation output in one run
 - Niche + tone controls built in
-- Local Ollama support with no recurring API cost
+- Free API support with no recurring cost in V1
 
 ## MVP Feature List (Max 4)
 1. Caption Generator: 3 caption variants

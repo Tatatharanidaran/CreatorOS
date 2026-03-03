@@ -4,18 +4,7 @@ set -euo pipefail
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$ROOT_DIR"
 
-MODEL="${OLLAMA_MODEL:-llama3.2:3b}"
-OLLAMA_URL="${OLLAMA_URL:-http://localhost:11434}"
-STARTED_OLLAMA=0
-OLLAMA_PID=""
 NVM_DIR="${NVM_DIR:-$HOME/.nvm}"
-
-cleanup() {
-  if [[ "$STARTED_OLLAMA" -eq 1 && -n "$OLLAMA_PID" ]]; then
-    kill "$OLLAMA_PID" >/dev/null 2>&1 || true
-  fi
-}
-trap cleanup EXIT INT TERM
 
 load_nvm() {
   if [[ -s "$NVM_DIR/nvm.sh" ]]; then
@@ -57,45 +46,43 @@ ensure_node() {
   echo "==> npm version: $(npm -v)"
 }
 
-install_ollama_if_missing() {
-  if command -v ollama >/dev/null 2>&1; then
-    return 0
+ensure_env() {
+  if [[ ! -f .env && -f .env.example ]]; then
+    echo "==> Creating .env from .env.example"
+    cp .env.example .env
   fi
 
-  echo "==> ollama not found. Trying automatic install..."
-  if command -v curl >/dev/null 2>&1; then
-    curl -fsSL https://ollama.com/install.sh | sh || true
+  if ! grep -q '^GROQ_API_KEY=' .env; then
+    echo "GROQ_API_KEY=your_groq_api_key_here" >> .env
   fi
 
-  if ! command -v ollama >/dev/null 2>&1; then
-    echo "Automatic Ollama install failed."
-    echo "Install Ollama manually from https://ollama.com/download and re-run ./run_project.sh"
-    exit 1
+  CURRENT_KEY="$(grep '^GROQ_API_KEY=' .env | tail -n 1 | cut -d'=' -f2-)"
+  if [[ -z "$CURRENT_KEY" || "$CURRENT_KEY" == "your_groq_api_key_here" ]]; then
+    echo
+    echo "==> Groq API key is required."
+    echo "Create one at: https://console.groq.com/keys"
+    read -r -s -p "Paste GROQ_API_KEY: " NEW_KEY
+    echo
+
+    if [[ -z "$NEW_KEY" ]]; then
+      echo "GROQ_API_KEY cannot be empty."
+      exit 1
+    fi
+
+    if grep -q '^GROQ_API_KEY=' .env; then
+      sed -i "s|^GROQ_API_KEY=.*|GROQ_API_KEY=$NEW_KEY|" .env
+    else
+      echo "GROQ_API_KEY=$NEW_KEY" >> .env
+    fi
   fi
 }
 
 echo "==> Bootstrapping project..."
 ensure_node
-install_ollama_if_missing
-
-if [[ ! -f .env && -f .env.example ]]; then
-  echo "==> Creating .env from .env.example"
-  cp .env.example .env
-fi
+ensure_env
 
 echo "==> Installing/updating npm dependencies..."
 npm install --no-fund
-
-echo "==> Ensuring Ollama server is running..."
-if ! curl -sf "${OLLAMA_URL}/api/tags" >/dev/null 2>&1; then
-  ollama serve >/tmp/insta_creator_ollama.log 2>&1 &
-  OLLAMA_PID=$!
-  STARTED_OLLAMA=1
-  sleep 2
-fi
-
-echo "==> Ensuring model exists: ${MODEL}"
-ollama pull "$MODEL"
 
 echo "==> Cleaning stale Next.js build cache..."
 rm -rf .next
