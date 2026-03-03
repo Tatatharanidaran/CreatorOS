@@ -1,0 +1,288 @@
+:root {
+  --bg: #f4f2ea;
+  --bg-accent: #d0e7de;
+  --ink: #172026;
+  --muted: #55636e;
+  --card: #fffef9;
+  --line: #d8d5cc;
+  --brand: #f97316;
+  --brand-dark: #c2410c;
+  --success: #0f766e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: var(--font-body), sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 0% 0%, #ffeec4 0%, transparent 35%),
+    radial-gradient(circle at 100% 20%, var(--bg-accent) 0%, transparent 32%),
+    var(--bg);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-family: var(--font-heading), sans-serif;
+  letter-spacing: 0.03em;
+  line-height: 1;
+}
+
+p {
+  margin: 0;
+}
+
+.page-shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+.hero {
+  border: 1px solid var(--line);
+  background: linear-gradient(140deg, #fffdf6 0%, #f4fff6 100%);
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.06);
+}
+
+.chip {
+  display: inline-flex;
+  background: #172026;
+  color: #ffffff;
+  border-radius: 999px;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.8rem;
+}
+
+.hero h1 {
+  margin-top: 0.5rem;
+  font-size: clamp(2.3rem, 7vw, 4.6rem);
+}
+
+.subtitle {
+  margin-top: 0.55rem;
+  font-size: 1rem;
+  max-width: 680px;
+}
+
+.pillars {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.pillars span {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.35rem 0.6rem;
+  font-size: 0.85rem;
+}
+
+.grid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.panel {
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: var(--card);
+  padding: 1rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.panel h2 {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+textarea,
+select {
+  width: 100%;
+  margin-top: 0.4rem;
+  margin-bottom: 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  font-family: var(--font-body), sans-serif;
+  font-size: 0.95rem;
+  padding: 0.65rem 0.75rem;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.inline-fields {
+  display: grid;
+  gap: 0.3rem;
+}
+
+.primary-btn {
+  border: none;
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, var(--brand) 0%, #fb923c 100%);
+  color: #fff;
+  cursor: pointer;
+}
+
+.primary-btn:hover:not(:disabled) {
+  background: linear-gradient(90deg, var(--brand-dark) 0%, #ea580c 100%);
+}
+
+.primary-btn:disabled {
+  opacity: 0.75;
+  cursor: wait;
+}
+
+.hint {
+  margin-top: 0.6rem;
+  color: var(--muted);
+  font-size: 0.83rem;
+}
+
+.error {
+  margin-top: 0.7rem;
+  color: #b91c1c;
+  font-weight: 600;
+}
+
+.results-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.results-head span {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.output-block {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 0.8rem;
+  margin-bottom: 0.75rem;
+  background: #fff;
+}
+
+.output-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.6rem;
+}
+
+.output-head h3 {
+  font-size: 1.3rem;
+}
+
+ol {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.65rem;
+}
+
+li p {
+  white-space: pre-line;
+}
+
+.copy-btn {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #f8f7f2;
+  color: #121f2b;
+  padding: 0.4rem 0.65rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.copy-btn:hover {
+  border-color: #b4aca1;
+}
+
+.hashtags-grid {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.hashtags-grid article {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0.6rem;
+  background: #fffefb;
+}
+
+.hashtags-grid h4 {
+  font-size: 1.05rem;
+  margin-bottom: 0.35rem;
+}
+
+.hashtags-grid p {
+  margin-bottom: 0.45rem;
+  color: #23313a;
+  line-height: 1.45;
+}
+
+.empty {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+@media (min-width: 900px) {
+  .page-shell {
+    padding: 1.5rem;
+  }
+
+  .grid {
+    grid-template-columns: minmax(320px, 420px) minmax(0, 1fr);
+    gap: 1rem;
+    align-items: start;
+  }
+
+  .panel {
+    padding: 1.2rem;
+  }
+
+  .form-panel {
+    position: sticky;
+    top: 1rem;
+  }
+
+  .inline-fields {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.8rem;
+  }
+
+  .hashtags-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
