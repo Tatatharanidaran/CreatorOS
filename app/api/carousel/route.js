@@ -1,4 +1,4 @@
-import { SYSTEM_PROMPT, buildUserPrompt } from '../../../lib/prompt';
+import { SYSTEM_PROMPT, buildCarouselPrompt } from '../../../lib/prompt';
 
 export const runtime = 'nodejs';
 export const maxDuration = 60;
@@ -15,9 +15,8 @@ function safeJsonParse(text) {
     const start = text.indexOf('{');
     const end = text.lastIndexOf('}');
     if (start !== -1 && end !== -1 && end > start) {
-      const maybeJson = text.slice(start, end + 1);
       try {
-        return JSON.parse(maybeJson);
+        return JSON.parse(text.slice(start, end + 1));
       } catch {
         return null;
       }
@@ -41,62 +40,23 @@ function normalizeCarousel(carousel) {
     .slice(0, 5);
 }
 
-function normalizeOutput(data) {
-  const hashtagSource = data?.hashtags || {};
-  const cta = Array.isArray(data?.cta) ? data.cta : Array.isArray(data?.ctas) ? data.ctas : [];
-
-  return {
-    hooks: Array.isArray(data?.hooks) ? data.hooks.slice(0, 3) : [],
-    captions: Array.isArray(data?.captions) ? data.captions.slice(0, 5) : [],
-    cta: cta.slice(0, 3),
-    hashtags: {
-      broad: Array.isArray(hashtagSource?.broad)
-        ? hashtagSource.broad
-        : Array.isArray(hashtagSource?.Broad)
-          ? hashtagSource.Broad
-          : Array.isArray(hashtagSource?.large)
-            ? hashtagSource.large
-            : [],
-      medium: Array.isArray(hashtagSource?.medium)
-        ? hashtagSource.medium
-        : Array.isArray(hashtagSource?.Medium)
-          ? hashtagSource.Medium
-          : [],
-      niche: Array.isArray(hashtagSource?.niche)
-        ? hashtagSource.niche
-        : Array.isArray(hashtagSource?.Niche)
-          ? hashtagSource.Niche
-          : Array.isArray(hashtagSource?.small)
-            ? hashtagSource.small
-            : []
-    },
-    carousel: normalizeCarousel(data?.carousel)
-  };
-}
-
 export async function POST(request) {
   try {
     if (!process.env.GROQ_API_KEY) {
       return Response.json(
-        {
-          error:
-            'Missing GROQ_API_KEY. Add GROQ_API_KEY in your local .env or in Vercel Environment Variables.'
-        },
+        { error: 'Missing GROQ_API_KEY in environment variables.' },
         { status: 500 }
       );
     }
 
     const body = await request.json();
-    const { imageDescription, niche, tone, contentType } = body || {};
+    const { topic, niche, tone } = body || {};
 
-    if (!imageDescription || !niche || !tone || !contentType) {
-      return Response.json(
-        { error: 'Missing required fields: imageDescription, niche, tone, contentType' },
-        { status: 400 }
-      );
+    if (!topic || !niche || !tone) {
+      return Response.json({ error: 'Missing required fields: topic, niche, tone' }, { status: 400 });
     }
 
-    const userPrompt = buildUserPrompt({ imageDescription, niche, tone, contentType });
+    const userPrompt = buildCarouselPrompt({ topic, niche, tone });
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
 
@@ -114,7 +74,7 @@ export async function POST(request) {
         ],
         response_format: { type: 'json_object' },
         temperature: 0.8,
-        max_completion_tokens: 1100,
+        max_completion_tokens: 800,
         stream: false
       }),
       signal: controller.signal
@@ -130,22 +90,13 @@ export async function POST(request) {
     const parsed = safeJsonParse(content);
 
     if (!parsed) {
-      return Response.json(
-        {
-          error: 'Model returned invalid JSON. Try again or switch model.',
-          raw: content
-        },
-        { status: 422 }
-      );
+      return Response.json({ error: 'Model returned invalid JSON.', raw: content }, { status: 422 });
     }
 
-    return Response.json({ data: normalizeOutput(parsed) });
+    return Response.json({ data: { carousel: normalizeCarousel(parsed?.carousel) } });
   } catch (error) {
     if (error instanceof Error && error.name === 'AbortError') {
-      return Response.json(
-        { error: 'Generation timed out. Please try again with a shorter description.' },
-        { status: 504 }
-      );
+      return Response.json({ error: 'Carousel generation timed out.' }, { status: 504 });
     }
 
     return Response.json(

@@ -1,5 +1,6 @@
 import { Bebas_Neue, DM_Sans } from 'next/font/google';
 import './globals.css';
+import Navbar from '../components/Navbar';
 
 const heading = Bebas_Neue({
   subsets: ['latin'],
@@ -15,13 +16,19 @@ const body = DM_Sans({
 
 export const metadata = {
   title: 'Insta Creator Helper',
-  description: 'Generate Instagram hooks, captions, CTAs, and hashtags with local Ollama models.'
+  description: 'Generate Instagram captions and build thumbnails and carousel slides with free tools.'
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${heading.variable} ${body.variable}`}>{children}</body>
+      <body className={`${heading.variable} ${body.variable}`}>
+        <Navbar />
+        {children}
+        <footer className="site-footer">
+          <p>Insta Creator Helper - Zero budget tools for small creators.</p>
+        </footer>
+      </body>
     </html>
   );
 }

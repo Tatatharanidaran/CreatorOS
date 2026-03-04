@@ -1,0 +1,58 @@
+Version 1.1 - UX Enhancements
+
+- Multi-caption output system:
+  The results panel now renders 5 caption variations as independent cards with tone label, character count, individual copy action, and copy-all support.
+
+- Hashtag grouping logic:
+  Hashtags are normalized and grouped into Broad Reach, Medium Competition, and Niche/Targeted buckets using internal heuristics and fallback balancing to keep each group in an 8-12 range.
+
+- Thumbnail preview workflow:
+  Users can upload an image, crop it client-side for a square Instagram feed ratio, and preview placement in a 3x3 feed grid mockup. No image is uploaded to the server.
+
+- Caption scoring system:
+  Each formatted caption is scored from 0-100 based on hook quality, length fit, CTA presence, and hashtag count, with suggestions shown when quality is low.
+
+Version 1.2 - Content Creation Enhancements
+
+- Result display architecture:
+  Generated output now renders in a structured section stack directly below the Generate Content button: Hooks, Caption Variations, CTA Suggestions, Hashtag Groups, Thumbnail Preview, and Carousel Generator.
+
+- Thumbnail download logic:
+  Thumbnail preview remains client-side and now supports optional text overlay plus PNG export through HTML5 Canvas with filename pattern instagram_thumbnail_TIMESTAMP.png.
+
+- Carousel generation workflow:
+  Main generation response now includes carousel slides, and a dedicated Carousel Generator tool can regenerate slide ideas from topic + niche + tone using the same Groq configuration.
+
+- Client-side canvas export:
+  All thumbnail rendering, overlay composition, and download generation happen fully in-browser with no server-side image upload.
+
+Version 1.3 - Multi Tool Platform
+
+- Navigation architecture:
+  Added a persistent top navbar with responsive mobile menu and direct routing to Home, Caption Generator, Thumbnail Creator, and Carousel Builder.
+
+- Multi-page structure:
+  Reorganized the app into dedicated routes: /, /caption, /thumbnail, /carousel so each workflow is isolated and easier to use.
+
+- Carousel builder workflow:
+  Introduced a client-side carousel editor with built-in templates, custom layout controls, slide add/duplicate/delete/reorder operations, and per-slide editing for text, colors, image placement, and background media.
+
+- Canvas export logic:
+  Implemented reusable canvas export utilities for thumbnail PNG downloads and carousel slide exports (current slide or all slides) fully in-browser with no server image uploads.
+
+Version 1.4 - Carousel Builder Upgrade
+
+- Dynamic slide architecture:
+  Carousel setup now starts with a slide-count modal (3-10) and initializes a matching editable slide set with unlimited per-slide image replacement.
+
+- Template system:
+  Added a dedicated template loader with reliable access to templates 1-4 plus custom layout, each with explicit image/text placeholders, background color, and grid metadata.
+
+- Font loading:
+  Implemented dynamic Google Font loading for design text layers (Poppins, Montserrat, Bebas Neue, Oswald, Playfair Display, Anton, Raleway, Lato) with live preview in editor panels.
+
+- Canvas rendering logic:
+  Added renderer utilities to draw slide backgrounds, image frames, and styled text (including gradient/highlight options) fully in browser canvas.
+
+- Slide export workflow:
+  Users can export current slide or all slides as PNG files with ordered filenames, while drag-and-drop slide strip controls export order.

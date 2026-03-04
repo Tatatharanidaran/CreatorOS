@@ -1,17 +1,16 @@
 'use client';
 
 import { useState } from 'react';
+import { copyToClipboard } from '../utils/copyToClipboard';
 
 export default function CopyButton({ text, label = 'Copy' }) {
   const [copied, setCopied] = useState(false);
 
   async function handleCopy() {
-    try {
-      await navigator.clipboard.writeText(text);
-      setCopied(true);
+    const ok = await copyToClipboard(text);
+    setCopied(ok);
+    if (ok) {
       setTimeout(() => setCopied(false), 1200);
-    } catch {
-      setCopied(false);
     }
   }
 
