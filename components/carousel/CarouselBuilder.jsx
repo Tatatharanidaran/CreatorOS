@@ -248,6 +248,14 @@ export default function CarouselBuilder() {
       if (event.key === 'Escape') {
         event.preventDefault();
         stopDrag();
+        return;
+      }
+
+      if (event.key === 'Delete' || event.key === 'Backspace') {
+        event.preventDefault();
+        if (selectedSlide?.id) {
+          setSlides((prev) => deleteSlide(prev, selectedSlide.id));
+        }
       }
     }
 
@@ -341,7 +349,9 @@ export default function CarouselBuilder() {
 
         <div className="canva-center">
           <h3>Canvas</h3>
-          <p className="shortcut-hint">Shortcuts: Left/Right arrows navigate slides, Ctrl/Cmd+C copy slide, Ctrl/Cmd+V paste, Ctrl/Cmd+Z undo, Esc cancel drag.</p>
+          <p className="shortcut-hint">
+            Shortcuts: Left/Right arrows navigate slides, Ctrl/Cmd+C copy slide, Ctrl/Cmd+V paste, Ctrl/Cmd+Z undo, Delete remove slide, Esc cancel drag.
+          </p>
           <div
             className="canvas-stage"
             onMouseMove={onCanvasMouseMove}

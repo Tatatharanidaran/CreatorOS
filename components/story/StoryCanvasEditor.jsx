@@ -52,10 +52,17 @@ export default function StoryCanvasEditor() {
   const [story, setStory] = useState(() => getDefaultStory());
   const [selectedLayer, setSelectedLayer] = useState(() => getInitialSelection(getDefaultStory()));
   const [busy, setBusy] = useState(false);
+  const [clipboardLayer, setClipboardLayer] = useState(null);
+  const [history, setHistory] = useState([]);
+  const [isUndoing, setIsUndoing] = useState(false);
 
   const stageRef = useRef(null);
   const inputRef = useRef(null);
   const interactionRef = useRef(null);
+
+  function cloneData(value) {
+    return JSON.parse(JSON.stringify(value));
+  }
 
   const selectedText = useMemo(
     () => story.textLayers.find((item) => item.id === selectedLayer.id) || story.textLayers[0],
@@ -82,6 +89,27 @@ export default function StoryCanvasEditor() {
       loadGoogleFont(selectedText.fontFamily);
     }
   }, [selectedText]);
+
+  useEffect(() => {
+    setHistory([{ story: cloneData(story), selectedLayer: cloneData(selectedLayer) }]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    if (isUndoing) {
+      setIsUndoing(false);
+      return;
+    }
+    setHistory((prev) => {
+      const entry = { story: cloneData(story), selectedLayer: cloneData(selectedLayer) };
+      const last = prev[prev.length - 1];
+      if (last && JSON.stringify(last.story) === JSON.stringify(entry.story)) {
+        return prev;
+      }
+      return [...prev.slice(-79), entry];
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [story]);
 
   useEffect(() => {
     function pointerToCanvas(event) {
@@ -296,9 +324,52 @@ export default function StoryCanvasEditor() {
   }
 
   function patchSelectedText(data) {
+    if (!selectedText) {
+      return;
+    }
     setStory((prev) => ({
       ...prev,
       textLayers: prev.textLayers.map((item) => (item.id === selectedText.id ? { ...item, ...data } : item))
+    }));
+  }
+
+  function addTextLayer() {
+    const id = `text-${Date.now()}`;
+    const base = selectedText || story.textLayers[0];
+    const fallback = {
+      text: 'New text',
+      x: 90,
+      y: 320,
+      width: 760,
+      size: 68,
+      color: '#111827',
+      fontFamily: 'Poppins',
+      weight: 700,
+      align: 'left',
+      italic: false
+    };
+    const seed = base || fallback;
+
+    setStory((prev) => ({
+      ...prev,
+      textLayers: [
+        ...prev.textLayers,
+        {
+          ...seed,
+          id,
+          text: 'New text',
+          x: clamp((seed.x || 90) + 24, 0, CANVAS_WIDTH - (seed.width || 760)),
+          y: clamp((seed.y || 240) + 24, 0, CANVAS_HEIGHT - 120)
+        }
+      ]
+    }));
+    setSelectedLayer({ type: 'text', id });
+  }
+
+  function applyFontToAllTexts(fontFamily) {
+    setStory((prev) => ({
+      ...prev,
+      textLayers: prev.textLayers.map((item) => ({ ...item, fontFamily }))
     }));
   }
 
@@ -376,23 +447,203 @@ export default function StoryCanvasEditor() {
   }
 
   function removeSelectedLayer() {
-    if (selectedLayer.type === 'emoji') {
-      setStory((prev) => ({ ...prev, emojis: prev.emojis.filter((item) => item.id !== selectedLayer.id) }));
-      setSelectedLayer(getInitialSelection(story));
+    setStory((prev) => {
+      let next = prev;
+      if (selectedLayer.type === 'text') {
+        next = {
+          ...prev,
+          textLayers: prev.textLayers.filter((item) => item.id !== selectedLayer.id)
+        };
+      } else if (selectedLayer.type === 'emoji') {
+        next = { ...prev, emojis: prev.emojis.filter((item) => item.id !== selectedLayer.id) };
+      } else if (selectedLayer.type === 'asset') {
+        next = { ...prev, assets: prev.assets.filter((item) => item.id !== selectedLayer.id) };
+      } else if (selectedLayer.type === 'shape') {
+        next = { ...prev, shapes: prev.shapes.filter((item) => item.id !== selectedLayer.id) };
+      }
+      queueMicrotask(() => setSelectedLayer(getInitialSelection(next)));
+      return next;
+    });
+  }
+
+  function copySelectedLayer() {
+    if (selectedLayer.type === 'image') {
+      setClipboardLayer({ type: 'image', payload: cloneData(story.image.box) });
       return;
     }
-
-    if (selectedLayer.type === 'asset') {
-      setStory((prev) => ({ ...prev, assets: prev.assets.filter((item) => item.id !== selectedLayer.id) }));
-      setSelectedLayer(getInitialSelection(story));
+    if (selectedLayer.type === 'text' && selectedText) {
+      setClipboardLayer({ type: 'text', payload: cloneData(selectedText) });
       return;
     }
-
-    if (selectedLayer.type === 'shape') {
-      setStory((prev) => ({ ...prev, shapes: prev.shapes.filter((item) => item.id !== selectedLayer.id) }));
-      setSelectedLayer(getInitialSelection(story));
+    if (selectedLayer.type === 'emoji' && selectedEmoji) {
+      setClipboardLayer({ type: 'emoji', payload: cloneData(selectedEmoji) });
+      return;
+    }
+    if (selectedLayer.type === 'asset' && selectedAsset) {
+      setClipboardLayer({ type: 'asset', payload: cloneData(selectedAsset) });
+      return;
+    }
+    if (selectedLayer.type === 'shape' && selectedShape) {
+      setClipboardLayer({ type: 'shape', payload: cloneData(selectedShape) });
     }
   }
+
+  function pasteSelectedLayer() {
+    if (!clipboardLayer) {
+      return;
+    }
+
+    if (clipboardLayer.type === 'image') {
+      setStory((prev) => ({
+        ...prev,
+        image: {
+          ...prev.image,
+          box: {
+            ...prev.image.box,
+            x: clamp((clipboardLayer.payload.x || 90) + 20, 0, CANVAS_WIDTH - prev.image.box.width),
+            y: clamp((clipboardLayer.payload.y || 620) + 20, 0, CANVAS_HEIGHT - prev.image.box.height)
+          }
+        }
+      }));
+      setSelectedLayer({ type: 'image', id: 'story-image' });
+      return;
+    }
+
+    if (clipboardLayer.type === 'text') {
+      const id = `text-${Date.now()}`;
+      const payload = clipboardLayer.payload;
+      setStory((prev) => ({
+        ...prev,
+        textLayers: [
+          ...prev.textLayers,
+          {
+            ...payload,
+            id,
+            x: clamp((payload.x || 90) + 20, 0, CANVAS_WIDTH - (payload.width || 300)),
+            y: clamp((payload.y || 250) + 20, 0, CANVAS_HEIGHT - 120)
+          }
+        ]
+      }));
+      setSelectedLayer({ type: 'text', id });
+      return;
+    }
+
+    if (clipboardLayer.type === 'emoji') {
+      const id = `emoji-${Date.now()}`;
+      const payload = clipboardLayer.payload;
+      setStory((prev) => ({
+        ...prev,
+        emojis: [...prev.emojis, { ...payload, id, x: (payload.x || 100) + 20, y: (payload.y || 120) + 20 }]
+      }));
+      setSelectedLayer({ type: 'emoji', id });
+      return;
+    }
+
+    if (clipboardLayer.type === 'asset') {
+      const id = `asset-${Date.now()}`;
+      const payload = clipboardLayer.payload;
+      setStory((prev) => ({
+        ...prev,
+        assets: [...prev.assets, { ...payload, id, x: (payload.x || 100) + 20, y: (payload.y || 100) + 20 }]
+      }));
+      setSelectedLayer({ type: 'asset', id });
+      return;
+    }
+
+    if (clipboardLayer.type === 'shape') {
+      const id = `shape-${Date.now()}`;
+      const payload = clipboardLayer.payload;
+      setStory((prev) => ({
+        ...prev,
+        shapes: [...prev.shapes, { ...payload, id, x: (payload.x || 100) + 20, y: (payload.y || 100) + 20 }]
+      }));
+      setSelectedLayer({ type: 'shape', id });
+    }
+  }
+
+  function undoLastAction() {
+    setHistory((prev) => {
+      if (prev.length < 2) {
+        return prev;
+      }
+      const next = prev.slice(0, -1);
+      const restore = next[next.length - 1];
+      setIsUndoing(true);
+      setStory(cloneData(restore.story));
+      setSelectedLayer(cloneData(restore.selectedLayer));
+      return next;
+    });
+  }
+
+  useEffect(() => {
+    function isTypingTarget(target) {
+      if (!target) {
+        return false;
+      }
+      const tag = target.tagName;
+      return tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT' || target.isContentEditable;
+    }
+
+    function onKeyDown(event) {
+      const withModifier = event.ctrlKey || event.metaKey;
+      const lowerKey = event.key.toLowerCase();
+
+      if (withModifier && lowerKey === 'c') {
+        if (!isTypingTarget(event.target)) {
+          event.preventDefault();
+          copySelectedLayer();
+        }
+        return;
+      }
+
+      if (withModifier && lowerKey === 'v') {
+        if (!isTypingTarget(event.target)) {
+          event.preventDefault();
+          pasteSelectedLayer();
+        }
+        return;
+      }
+
+      if (withModifier && lowerKey === 'z') {
+        if (!isTypingTarget(event.target)) {
+          event.preventDefault();
+          undoLastAction();
+        }
+        return;
+      }
+
+      if (isTypingTarget(event.target)) {
+        if (event.key === 'Escape') {
+          event.target.blur();
+        }
+        return;
+      }
+
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        interactionRef.current = null;
+        return;
+      }
+
+      if (event.key !== 'Delete' && event.key !== 'Backspace') {
+        return;
+      }
+
+      if (selectedLayer.type === 'image') {
+        event.preventDefault();
+        removeImage();
+        return;
+      }
+
+      if (selectedLayer.type === 'text' || selectedLayer.type === 'asset' || selectedLayer.type === 'emoji' || selectedLayer.type === 'shape') {
+        event.preventDefault();
+        removeSelectedLayer();
+      }
+    }
+
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, [selectedLayer, story, selectedText, selectedEmoji, selectedAsset, selectedShape, clipboardLayer]);
 
   function startTransform(event, type, id, mode, payload) {
     event.preventDefault();
@@ -481,14 +732,27 @@ export default function StoryCanvasEditor() {
       <div className="canva-right">
         <h3>Element settings</h3>
         <p className="layer-pill">Selected: {getLayerLabel(selectedLayer)}</p>
+        <div className="editor-row">
+          <button type="button" className="copy-btn" onClick={addTextLayer}>
+            Add Text
+          </button>
+        </div>
 
         {selectedLayer.type === 'text' && selectedText ? (
           <>
+            <div className="editor-row">
+              <button type="button" className="ghost-link" onClick={removeSelectedLayer}>
+                Delete Text
+              </button>
+            </div>
             <label>
               Text
               <textarea rows={3} value={selectedText.text} onChange={(event) => patchSelectedText({ text: event.target.value })} />
             </label>
             <FontSelector value={selectedText.fontFamily} onChange={(fontFamily) => patchSelectedText({ fontFamily })} />
+            <button type="button" className="copy-btn" onClick={() => applyFontToAllTexts(selectedText.fontFamily)}>
+              Apply This Font To All Text
+            </button>
             <div className="editor-grid">
               <label>
                 Font size
