@@ -6,10 +6,12 @@ import EmojiSelector from './EmojiSelector';
 import StoryTemplatePicker from './StoryTemplatePicker';
 import StoryAssetPanel from './StoryAssetPanel';
 import StoryTemplateRenderer from './StoryTemplateRenderer';
+import ImageFrameControls from './ImageFrameControls';
 import { downloadStory } from '../../utils/storyRenderer';
 import { loadGoogleFont } from '../../utils/fontLoader';
 import { MANUAL_ASSET_SOURCES } from '../../utils/assetLoader';
 import { buildStoryFromTemplate, getDefaultStory } from '../../utils/templateLoader';
+import { clampOffsets, clampZoom, getDefaultFrameState } from '../../utils/imageFrameHandler';
 
 const CANVAS_WIDTH = 1080;
 const CANVAS_HEIGHT = 1920;
@@ -148,14 +150,14 @@ export default function StoryCanvasEditor() {
               ...prev,
               image: {
                 ...prev.image,
-                box: { ...prev.image.box, x: clamp(x, 0, CANVAS_WIDTH - width), y: clamp(y, 0, CANVAS_HEIGHT - height) }
+                box: { ...prev.image.box, x, y }
               }
             };
           }
 
           if (interaction.mode === 'resize') {
-            const width = clamp((interaction.baseWidth || prev.image.box.width) + dx, 120, CANVAS_WIDTH);
-            const height = clamp((interaction.baseHeight || prev.image.box.height) + dy, 120, CANVAS_HEIGHT);
+            const width = Math.max(120, (interaction.baseWidth || prev.image.box.width) + dx);
+            const height = Math.max(120, (interaction.baseHeight || prev.image.box.height) + dy);
             return {
               ...prev,
               image: {
@@ -164,8 +166,8 @@ export default function StoryCanvasEditor() {
                   ...prev.image.box,
                   width,
                   height,
-                  x: clamp(prev.image.box.x, 0, CANVAS_WIDTH - width),
-                  y: clamp(prev.image.box.y, 0, CANVAS_HEIGHT - height)
+                  x: prev.image.box.x,
+                  y: prev.image.box.y
                 }
               }
             };
@@ -425,6 +427,24 @@ export default function StoryCanvasEditor() {
     }
   }
 
+  function patchImageFrame(nextFrame) {
+    setStory((prev) => {
+      if (!prev.image) {
+        return prev;
+      }
+      return {
+        ...prev,
+        image: {
+          ...prev.image,
+          frame: {
+            ...(prev.image.frame || {}),
+            ...(nextFrame || {})
+          }
+        }
+      };
+    });
+  }
+
   function onImageUpload(event) {
     const file = event.target.files?.[0];
     if (!file) {
@@ -433,17 +453,123 @@ export default function StoryCanvasEditor() {
 
     const reader = new FileReader();
     reader.onload = () => {
-      setStory((prev) => ({ ...prev, image: { ...prev.image, src: `${reader.result || ''}` } }));
+      setStory((prev) => ({
+        ...prev,
+        image: {
+          ...prev.image,
+          src: `${reader.result || ''}`,
+          frame: {
+            zoom: 1,
+            offsetX: 0,
+            offsetY: 0,
+            imageWidth: 0,
+            imageHeight: 0
+          }
+        }
+      }));
       setSelectedLayer({ type: 'image', id: 'story-image' });
     };
     reader.readAsDataURL(file);
   }
 
   function removeImage() {
-    setStory((prev) => ({ ...prev, image: { ...prev.image, src: '' } }));
+    setStory((prev) => ({
+      ...prev,
+      image: {
+        ...prev.image,
+        src: '',
+        frame: {
+          zoom: 1,
+          offsetX: 0,
+          offsetY: 0,
+          imageWidth: 0,
+          imageHeight: 0
+        }
+      }
+    }));
     if (inputRef.current) {
       inputRef.current.value = '';
     }
+  }
+
+  function resetImageFrame() {
+    setStory((prev) => {
+      const image = prev.image;
+      if (!image?.src) {
+        return prev;
+      }
+      const w = image.frame?.imageWidth || 0;
+      const h = image.frame?.imageHeight || 0;
+      if (!w || !h) {
+        return {
+          ...prev,
+          image: {
+            ...image,
+            frame: {
+              zoom: 1,
+              offsetX: 0,
+              offsetY: 0,
+              imageWidth: w,
+              imageHeight: h
+            }
+          }
+        };
+      }
+      const base = getDefaultFrameState({ frameWidth: image.box.width, frameHeight: image.box.height, imageWidth: w, imageHeight: h });
+      return {
+        ...prev,
+        image: {
+          ...image,
+          frame: base
+        }
+      };
+    });
+  }
+
+  function setImageZoom(nextZoom) {
+    setStory((prev) => {
+      const image = prev.image;
+      if (!image?.src) {
+        return prev;
+      }
+      const frame = image.frame || {};
+      const zoom = clampZoom(nextZoom);
+      const w = frame.imageWidth || 0;
+      const h = frame.imageHeight || 0;
+      if (!w || !h) {
+        return {
+          ...prev,
+          image: {
+            ...image,
+            frame: {
+              ...frame,
+              zoom
+            }
+          }
+        };
+      }
+      const nextOffsets = clampOffsets({
+        offsetX: frame.offsetX || 0,
+        offsetY: frame.offsetY || 0,
+        imageWidth: w,
+        imageHeight: h,
+        frameWidth: image.box.width,
+        frameHeight: image.box.height,
+        zoom
+      });
+
+      return {
+        ...prev,
+        image: {
+          ...image,
+          frame: {
+            ...frame,
+            zoom,
+            ...nextOffsets
+          }
+        }
+      };
+    });
   }
 
   function removeSelectedLayer() {
@@ -726,6 +852,8 @@ export default function StoryCanvasEditor() {
           setSelectedLayer={setSelectedLayer}
           startTransform={startTransform}
           scale={SCALE}
+          openImagePicker={openImagePicker}
+          patchImageFrame={patchImageFrame}
         />
       </div>
 
@@ -805,15 +933,17 @@ export default function StoryCanvasEditor() {
 
         {selectedLayer.type === 'image' ? (
           <>
-            <div className="editor-row">
-              <button type="button" className="primary-btn" onClick={openImagePicker}>
-                Replace Image
-              </button>
-              <button type="button" className="ghost-link" onClick={removeImage}>
-                Remove Image
-              </button>
-            </div>
-            <p className="transform-hint">Drag image on canvas to move. Use bottom-right handle to resize and top handle to rotate.</p>
+            <ImageFrameControls
+              hasImage={Boolean(story.image?.src)}
+              zoom={story.image?.frame?.zoom || 1}
+              onReplace={openImagePicker}
+              onRemove={removeImage}
+              onZoomChange={setImageZoom}
+              onReset={resetImageFrame}
+            />
+            <p className="transform-hint">
+              Drag inside the frame to reposition. Scroll or use the slider to zoom. Hold Alt and drag to move the whole frame. Use the handles to resize and rotate.
+            </p>
           </>
         ) : null}
 

@@ -50,7 +50,14 @@ function buildStoryFromTemplate(template) {
     image: {
       id: 'story-image',
       src: '',
-      box: { ...DEFAULT_IMAGE_BOX }
+      box: { ...DEFAULT_IMAGE_BOX },
+      frame: {
+        zoom: 1,
+        offsetX: 0,
+        offsetY: 0,
+        imageWidth: 0,
+        imageHeight: 0
+      }
     },
     textLayers,
     emojis,

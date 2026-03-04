@@ -1,4 +1,6 @@
-export default function StoryTemplateRenderer({ stageRef, story, selectedLayer, setSelectedLayer, startTransform, scale }) {
+import ImageFrame from './ImageFrame';
+
+export default function StoryTemplateRenderer({ stageRef, story, selectedLayer, setSelectedLayer, startTransform, scale, openImagePicker, patchImageFrame }) {
   return (
     <div className="story-stage" ref={stageRef}>
       {story.background.type === 'image' ? <img src={story.background.src} alt="Story background" className="story-bg" /> : null}
@@ -31,43 +33,44 @@ export default function StoryTemplateRenderer({ stageRef, story, selectedLayer, 
             </button>
           ))}
 
-      {story.image.src ? (
-        <button
-          type="button"
-          className={`story-image ${selectedLayer.type === 'image' ? 'active' : ''}`}
-          onClick={() => setSelectedLayer({ type: 'image', id: 'story-image' })}
-          onPointerDown={(event) => startTransform(event, 'image', 'story-image', 'drag', story.image.box)}
-          style={{
-            left: `${story.image.box.x * scale}px`,
-            top: `${story.image.box.y * scale}px`,
-            width: `${story.image.box.width * scale}px`,
-            height: `${story.image.box.height * scale}px`,
-            transform: `rotate(${story.image.box.rotation || 0}deg)`
-          }}
-        >
-          <img src={story.image.src} alt="Story" />
-          {selectedLayer.type === 'image' ? (
-            <>
-              <span className="transform-handle rotate" onPointerDown={(event) => startTransform(event, 'image', 'story-image', 'rotate', story.image.box)} />
-              <span className="transform-handle resize" onPointerDown={(event) => startTransform(event, 'image', 'story-image', 'resize', story.image.box)} />
-            </>
-          ) : null}
-        </button>
-      ) : (
-        <button
-          type="button"
-          className={`story-placeholder ${selectedLayer.type === 'image' ? 'active' : ''}`}
-          onClick={() => setSelectedLayer({ type: 'image', id: 'story-image' })}
-          style={{
-            left: `${story.image.box.x * scale}px`,
-            top: `${story.image.box.y * scale}px`,
-            width: `${story.image.box.width * scale}px`,
-            height: `${story.image.box.height * scale}px`
-          }}
-        >
-          <span>Tap Upload image to place a photo</span>
-        </button>
-      )}
+      <button
+        type="button"
+        className={`story-image-frame ${selectedLayer.type === 'image' ? 'active' : ''}`}
+        onClick={() => setSelectedLayer({ type: 'image', id: 'story-image' })}
+        onPointerDownCapture={(event) => {
+          if (!event.altKey) {
+            return;
+          }
+          setSelectedLayer({ type: 'image', id: 'story-image' });
+          startTransform(event, 'image', 'story-image', 'drag', story.image.box);
+        }}
+        style={{
+          left: `${story.image.box.x * scale}px`,
+          top: `${story.image.box.y * scale}px`,
+          width: `${story.image.box.width * scale}px`,
+          height: `${story.image.box.height * scale}px`,
+          transform: `rotate(${story.image.box.rotation || 0}deg)`
+        }}
+      >
+        <ImageFrame
+          src={story.image.src}
+          frameWidth={story.image.box.width}
+          frameHeight={story.image.box.height}
+          frame={story.image.frame}
+          selected={selectedLayer.type === 'image'}
+          scale={scale}
+          onChange={(nextFrame) => patchImageFrame?.(nextFrame)}
+          onRequestSelect={() => setSelectedLayer({ type: 'image', id: 'story-image' })}
+          onRequestUpload={openImagePicker}
+        />
+
+        {selectedLayer.type === 'image' ? (
+          <>
+            <span className="transform-handle rotate" onPointerDown={(event) => startTransform(event, 'image', 'story-image', 'rotate', story.image.box)} />
+            <span className="transform-handle resize" onPointerDown={(event) => startTransform(event, 'image', 'story-image', 'resize', story.image.box)} />
+          </>
+        ) : null}
+      </button>
 
       {story.assets.map((asset) => (
         <button

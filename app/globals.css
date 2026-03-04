@@ -1273,6 +1273,53 @@ select {
   border-color: #172026;
 }
 
+.story-image-frame {
+  position: absolute;
+  padding: 0;
+  background: transparent;
+  cursor: move;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  overflow: visible;
+}
+
+.story-image-frame.active {
+  border-color: #172026;
+}
+
+.image-frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.image-frame-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin: 0 0;
+  user-select: none;
+  pointer-events: none;
+}
+
+.image-frame-placeholder {
+  width: 100%;
+  height: 100%;
+  border: 2px dashed rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.35);
+  color: #0f172a;
+  font-size: 0.78rem;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 0.6rem;
+  cursor: pointer;
+}
+
 .story-text {
   position: absolute;
   border: 1px dashed rgba(255, 255, 255, 0.7);
@@ -1380,6 +1427,7 @@ select {
   display: -webkit-box;
   overflow: hidden;
   text-overflow: ellipsis;
+  line-clamp: 2;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   word-break: break-word;

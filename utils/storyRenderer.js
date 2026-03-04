@@ -1,5 +1,16 @@
 import { loadGoogleFont } from './fontLoader';
 
+function clamp(value, min, max) {
+  return Math.min(max, Math.max(min, value));
+}
+
+function getCoverBaseScale({ frameWidth, frameHeight, imageWidth, imageHeight }) {
+  if (!frameWidth || !frameHeight || !imageWidth || !imageHeight) {
+    return 1;
+  }
+  return Math.max(frameWidth / imageWidth, frameHeight / imageHeight);
+}
+
 function loadImage(src) {
   return new Promise((resolve, reject) => {
     if (!src) {
@@ -46,6 +57,48 @@ function drawRotatedImage(ctx, image, box) {
   ctx.translate(cx, cy);
   ctx.rotate((rotation * Math.PI) / 180);
   ctx.drawImage(image, -box.width / 2, -box.height / 2, box.width, box.height);
+  ctx.restore();
+}
+
+function drawRotatedImageFrame(ctx, image, { box, frame }) {
+  if (!box) {
+    return;
+  }
+  const rotation = box.rotation || 0;
+  const cx = box.x + box.width / 2;
+  const cy = box.y + box.height / 2;
+
+  const zoom = frame?.zoom || 1;
+  const imageWidth = frame?.imageWidth || image.naturalWidth || image.width || 0;
+  const imageHeight = frame?.imageHeight || image.naturalHeight || image.height || 0;
+  const baseScale = getCoverBaseScale({ frameWidth: box.width, frameHeight: box.height, imageWidth, imageHeight });
+  const scale = baseScale * zoom;
+
+  const scaledWidth = imageWidth * scale;
+  const scaledHeight = imageHeight * scale;
+
+  const minX = box.width - scaledWidth;
+  const minY = box.height - scaledHeight;
+
+  const offsetX = clamp(frame?.offsetX ?? (box.width - scaledWidth) / 2, minX, 0);
+  const offsetY = clamp(frame?.offsetY ?? (box.height - scaledHeight) / 2, minY, 0);
+
+  ctx.save();
+  ctx.translate(cx, cy);
+  ctx.rotate((rotation * Math.PI) / 180);
+
+  ctx.beginPath();
+  ctx.rect(-box.width / 2, -box.height / 2, box.width, box.height);
+  ctx.clip();
+
+  ctx.drawImage(
+    image,
+    -box.width / 2 + offsetX,
+    -box.height / 2 + offsetY,
+    scaledWidth,
+    scaledHeight
+  );
+
   ctx.restore();
 }
 
@@ -134,7 +187,7 @@ export async function renderStoryDataUrl(story) {
 
   const image = await loadImage(story.image?.src).catch(() => null);
   if (image && story.image?.box) {
-    drawRotatedImage(ctx, image, story.image.box);
+    drawRotatedImageFrame(ctx, image, { box: story.image.box, frame: story.image.frame });
   }
 
   for (const asset of story.assets || []) {
