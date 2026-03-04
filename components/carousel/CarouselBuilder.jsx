@@ -10,7 +10,6 @@ import {
   createSlide,
   createSlides,
   deleteSlide,
-  duplicateSlide,
   moveSlide,
   reorderSlides
 } from '../../utils/slideManager';
@@ -31,6 +30,9 @@ export default function CarouselBuilder() {
   const [selectedTemplate, setSelectedTemplate] = useState('title_content');
   const [busy, setBusy] = useState(false);
   const [dragState, setDragState] = useState(null);
+  const [clipboardSlide, setClipboardSlide] = useState(null);
+  const [history, setHistory] = useState([]);
+  const [isUndoing, setIsUndoing] = useState(false);
 
   function startBuilder() {
     const initialSlides = createSlides(slideCount, 'title_content');
@@ -41,6 +43,23 @@ export default function CarouselBuilder() {
   }
 
   const selectedSlide = useMemo(() => slides.find((slide) => slide.id === selectedId) || slides[0], [slides, selectedId]);
+
+  useEffect(() => {
+    if (!isInitialized) {
+      return;
+    }
+    if (isUndoing) {
+      setIsUndoing(false);
+      return;
+    }
+    setHistory((prev) => {
+      const last = prev[prev.length - 1];
+      if (last?.slides === slides && last?.selectedId === selectedId) {
+        return prev;
+      }
+      return [...prev.slice(-49), { slides, selectedId }];
+    });
+  }, [slides, selectedId, isInitialized, isUndoing]);
 
   useEffect(() => {
     if (!slides.length) {
@@ -125,6 +144,117 @@ export default function CarouselBuilder() {
     setDragState(null);
   }
 
+  function selectNextSlide(direction) {
+    if (!slides.length || !selectedSlide) {
+      return;
+    }
+    const currentIndex = slides.findIndex((slide) => slide.id === selectedSlide.id);
+    if (currentIndex < 0) {
+      return;
+    }
+    const targetIndex = clamp(currentIndex + direction, 0, slides.length - 1);
+    setSelectedId(slides[targetIndex].id);
+  }
+
+  function copySelectedSlide() {
+    if (!selectedSlide) {
+      return;
+    }
+    setClipboardSlide(JSON.parse(JSON.stringify(selectedSlide)));
+  }
+
+  function pasteClipboardSlide() {
+    if (!clipboardSlide || !selectedSlide) {
+      return;
+    }
+    const nextId = createSlide(clipboardSlide.template || selectedTemplate, slides.length + 1).id;
+    setSlides((prev) => {
+      const index = prev.findIndex((item) => item.id === selectedSlide.id);
+      const insertIndex = index < 0 ? prev.length : index + 1;
+      const pasted = { ...clipboardSlide, id: nextId, title: `${clipboardSlide.title || 'Slide'} Copy` };
+      const next = [...prev];
+      next.splice(insertIndex, 0, pasted);
+      return next;
+    });
+    setSelectedId(nextId);
+  }
+
+  function undoLastAction() {
+    if (!history.length) {
+      return;
+    }
+    const previous = history[history.length - 1];
+    setIsUndoing(true);
+    setHistory((prev) => prev.slice(0, -1));
+    setSlides(previous.slides);
+    setSelectedId(previous.selectedId);
+  }
+
+  useEffect(() => {
+    if (!isInitialized) {
+      return;
+    }
+
+    function isInputTarget(target) {
+      if (!target) {
+        return false;
+      }
+      const tag = target.tagName;
+      return tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT' || target.isContentEditable;
+    }
+
+    function onKeyDown(event) {
+      const withModifier = event.ctrlKey || event.metaKey;
+      const typing = isInputTarget(event.target);
+      const key = event.key.toLowerCase();
+
+      if (withModifier && key === 'c' && !typing) {
+        event.preventDefault();
+        copySelectedSlide();
+        return;
+      }
+
+      if (withModifier && key === 'v' && !typing) {
+        event.preventDefault();
+        pasteClipboardSlide();
+        return;
+      }
+
+      if (withModifier && key === 'z' && !event.shiftKey) {
+        event.preventDefault();
+        undoLastAction();
+        return;
+      }
+
+      if (typing) {
+        if (event.key === 'Escape') {
+          event.target.blur();
+        }
+        return;
+      }
+
+      if (event.key === 'ArrowRight') {
+        event.preventDefault();
+        selectNextSlide(1);
+        return;
+      }
+
+      if (event.key === 'ArrowLeft') {
+        event.preventDefault();
+        selectNextSlide(-1);
+        return;
+      }
+
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        stopDrag();
+      }
+    }
+
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, [isInitialized, slides, selectedSlide, clipboardSlide, history, selectedTemplate]);
+
   async function downloadCurrent() {
     if (!selectedSlide) {
       return;
@@ -168,7 +298,25 @@ export default function CarouselBuilder() {
             }}>
               Add Slide
             </button>
-            <button type="button" className="copy-btn" onClick={() => setSlides((prev) => duplicateSlide(prev, selectedSlide.id))}>
+            <button
+              type="button"
+              className="copy-btn"
+              onClick={() => {
+                const duplicatedId = createSlide(selectedTemplate, slides.length + 1).id;
+                setSlides((prev) => {
+                  const source = prev.find((slide) => slide.id === selectedSlide.id);
+                  if (!source) {
+                    return prev;
+                  }
+                  const clone = { ...source, id: duplicatedId, title: `${source.title} Copy` };
+                  const index = prev.findIndex((slide) => slide.id === selectedSlide.id);
+                  const next = [...prev];
+                  next.splice(index + 1, 0, clone);
+                  return next;
+                });
+                setSelectedId(duplicatedId);
+              }}
+            >
               Duplicate
             </button>
             <button
@@ -193,6 +341,7 @@ export default function CarouselBuilder() {
 
         <div className="canva-center">
           <h3>Canvas</h3>
+          <p className="shortcut-hint">Shortcuts: Left/Right arrows navigate slides, Ctrl/Cmd+C copy slide, Ctrl/Cmd+V paste, Ctrl/Cmd+Z undo, Esc cancel drag.</p>
           <div
             className="canvas-stage"
             onMouseMove={onCanvasMouseMove}

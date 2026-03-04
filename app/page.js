@@ -16,6 +16,16 @@ const FEATURES = [
     title: 'Carousel Builder',
     description: 'Build multi-slide carousel posts with templates, custom layouts, and PNG export.',
     href: '/carousel'
+  },
+  {
+    title: 'Story Creator',
+    description: 'Design 1080x1920 story slides with editable templates, emojis, and quick exports.',
+    href: '/story'
+  },
+  {
+    title: 'Reels Planner',
+    description: 'Generate reel ideas, scripts, shot lists, captions, and hashtag sets for filming.',
+    href: '/reels'
   }
 ];
 

@@ -1,0 +1,3732 @@
+[
+  {
+    "id": "birthday_01",
+    "category": "birthday",
+    "name": "Birthday Template 01",
+    "background": "/story_templates/custom/backgrounds/bg_002.jpg",
+    "overlay": "rgba(15, 23, 42, 0.1)",
+    "elements": [
+      {
+        "type": "shape",
+        "color": "#f8fafc",
+        "opacity": 0.46,
+        "x": 70,
+        "y": 170,
+        "width": 940,
+        "height": 350,
+        "radius": 44,
+        "rotation": -2
+      },
+      {
+        "type": "text",
+        "content": "Happy Birthday, superstar!",
+        "font": "Poppins",
+        "fontSize": 78,
+        "color": "#1f2937",
+        "x": 90,
+        "y": 240,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "text",
+        "content": "Tap to view",
+        "font": "Poppins",
+        "fontSize": 42,
+        "color": "#334155",
+        "x": 90,
+        "y": 1460,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "emoji",
+        "content": "🎉",
+        "size": 90,
+        "x": 110,
+        "y": 130
+      },
+      {
+        "type": "emoji",
+        "content": "🥳",
+        "size": 80,
+        "x": 860,
+        "y": 180
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/balloons.svg",
+        "width": 270,
+        "height": 510,
+        "x": 720,
+        "y": 1180,
+        "rotation": 8
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/cake.svg",
+        "width": 240,
+        "height": 240,
+        "x": 90,
+        "y": 1320,
+        "rotation": -6
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/confetti.svg",
+        "width": 860,
+        "height": 260,
+        "x": 120,
+        "y": 1580,
+        "rotation": 0
+      }
+    ]
+  },
+  {
+    "id": "birthday_02",
+    "category": "birthday",
+    "name": "Birthday Template 02",
+    "background": "/story_templates/custom/backgrounds/bg_003.jpg",
+    "overlay": "rgba(15, 23, 42, 0.1)",
+    "elements": [
+      {
+        "type": "shape",
+        "color": "#f8fafc",
+        "opacity": 0.46,
+        "x": 70,
+        "y": 182,
+        "width": 940,
+        "height": 350,
+        "radius": 44,
+        "rotation": 2
+      },
+      {
+        "type": "text",
+        "content": "Make a wish and own today",
+        "font": "Montserrat",
+        "fontSize": 78,
+        "color": "#1f2937",
+        "x": 90,
+        "y": 252,
+        "width": 900,
+        "align": "left",
+        "weight": 700
+      },
+      {
+        "type": "text",
+        "content": "Swipe for details",
+        "font": "Poppins",
+        "fontSize": 42,
+        "color": "#334155",
+        "x": 90,
+        "y": 1472,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "emoji",
+        "content": "🎂",
+        "size": 90,
+        "x": 150,
+        "y": 170
+      },
+      {
+        "type": "emoji",
+        "content": "🎁",
+        "size": 80,
+        "x": 860,
+        "y": 210
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/balloons.svg",
+        "width": 270,
+        "height": 510,
+        "x": 720,
+        "y": 1180,
+        "rotation": -8
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/cake.svg",
+        "width": 240,
+        "height": 240,
+        "x": 90,
+        "y": 1320,
+        "rotation": -6
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/confetti.svg",
+        "width": 860,
+        "height": 260,
+        "x": 120,
+        "y": 1580,
+        "rotation": 0
+      }
+    ]
+  },
+  {
+    "id": "birthday_03",
+    "category": "birthday",
+    "name": "Birthday Template 03",
+    "background": "/story_templates/custom/backgrounds/bg_004.jpg",
+    "overlay": "rgba(15, 23, 42, 0.1)",
+    "elements": [
+      {
+        "type": "shape",
+        "color": "#f8fafc",
+        "opacity": 0.46,
+        "x": 70,
+        "y": 194,
+        "width": 940,
+        "height": 350,
+        "radius": 44,
+        "rotation": -2
+      },
+      {
+        "type": "text",
+        "content": "Cake, candles, and pure joy",
+        "font": "Bebas Neue",
+        "fontSize": 78,
+        "color": "#1f2937",
+        "x": 90,
+        "y": 264,
+        "width": 900,
+        "align": "left",
+        "weight": 700
+      },
+      {
+        "type": "text",
+        "content": "Reply now",
+        "font": "Poppins",
+        "fontSize": 42,
+        "color": "#334155",
+        "x": 90,
+        "y": 1484,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "emoji",
+        "content": "🎈",
+        "size": 90,
+        "x": 190,
+        "y": 130
+      },
+      {
+        "type": "emoji",
+        "content": "✨",
+        "size": 80,
+        "x": 860,
+        "y": 240
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/balloons.svg",
+        "width": 270,
+        "height": 510,
+        "x": 720,
+        "y": 1180,
+        "rotation": 8
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/cake.svg",
+        "width": 240,
+        "height": 240,
+        "x": 90,
+        "y": 1320,
+        "rotation": -6
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/confetti.svg",
+        "width": 860,
+        "height": 260,
+        "x": 120,
+        "y": 1580,
+        "rotation": 0
+      }
+    ]
+  },
+  {
+    "id": "birthday_04",
+    "category": "birthday",
+    "name": "Birthday Template 04",
+    "background": "/story_templates/custom/backgrounds/bg_005.jpg",
+    "overlay": "rgba(15, 23, 42, 0.1)",
+    "elements": [
+      {
+        "type": "shape",
+        "color": "#f8fafc",
+        "opacity": 0.46,
+        "x": 70,
+        "y": 206,
+        "width": 940,
+        "height": 350,
+        "radius": 44,
+        "rotation": 2
+      },
+      {
+        "type": "text",
+        "content": "Another year. Still iconic.",
+        "font": "Poppins",
+        "fontSize": 78,
+        "color": "#1f2937",
+        "x": 90,
+        "y": 276,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "text",
+        "content": "DM for link",
+        "font": "Poppins",
+        "fontSize": 42,
+        "color": "#334155",
+        "x": 90,
+        "y": 1460,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "emoji",
+        "content": "🥳",
+        "size": 90,
+        "x": 110,
+        "y": 170
+      },
+      {
+        "type": "emoji",
+        "content": "💖",
+        "size": 80,
+        "x": 860,
+        "y": 270
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/balloons.svg",
+        "width": 270,
+        "height": 510,
+        "x": 720,
+        "y": 1180,
+        "rotation": -8
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/cake.svg",
+        "width": 240,
+        "height": 240,
+        "x": 90,
+        "y": 1320,
+        "rotation": -6
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/confetti.svg",
+        "width": 860,
+        "height": 260,
+        "x": 120,
+        "y": 1580,
+        "rotation": 0
+      }
+    ]
+  },
+  {
+    "id": "birthday_05",
+    "category": "birthday",
+    "name": "Birthday Template 05",
+    "background": "/story_templates/custom/backgrounds/bg_006.jpg",
+    "overlay": "rgba(15, 23, 42, 0.1)",
+    "elements": [
+      {
+        "type": "shape",
+        "color": "#f8fafc",
+        "opacity": 0.46,
+        "x": 70,
+        "y": 218,
+        "width": 940,
+        "height": 350,
+        "radius": 44,
+        "rotation": -2
+      },
+      {
+        "type": "text",
+        "content": "Birthday glow activated",
+        "font": "Montserrat",
+        "fontSize": 78,
+        "color": "#1f2937",
+        "x": 90,
+        "y": 288,
+        "width": 900,
+        "align": "left",
+        "weight": 700
+      },
+      {
+        "type": "text",
+        "content": "Join today",
+        "font": "Poppins",
+        "fontSize": 42,
+        "color": "#334155",
+        "x": 90,
+        "y": 1472,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "emoji",
+        "content": "🎁",
+        "size": 90,
+        "x": 150,
+        "y": 130
+      },
+      {
+        "type": "emoji",
+        "content": "🎉",
+        "size": 80,
+        "x": 860,
+        "y": 180
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/balloons.svg",
+        "width": 270,
+        "height": 510,
+        "x": 720,
+        "y": 1180,
+        "rotation": 8
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/cake.svg",
+        "width": 240,
+        "height": 240,
+        "x": 90,
+        "y": 1320,
+        "rotation": -6
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/confetti.svg",
+        "width": 860,
+        "height": 260,
+        "x": 120,
+        "y": 1580,
+        "rotation": 0
+      }
+    ]
+  },
+  {
+    "id": "birthday_06",
+    "category": "birthday",
+    "name": "Birthday Template 06",
+    "background": "/story_templates/custom/backgrounds/bg_007.jpg",
+    "overlay": "rgba(15, 23, 42, 0.1)",
+    "elements": [
+      {
+        "type": "shape",
+        "color": "#f8fafc",
+        "opacity": 0.46,
+        "x": 70,
+        "y": 170,
+        "width": 940,
+        "height": 350,
+        "radius": 44,
+        "rotation": 2
+      },
+      {
+        "type": "text",
+        "content": "Cheers to your next chapter",
+        "font": "Bebas Neue",
+        "fontSize": 78,
+        "color": "#1f2937",
+        "x": 90,
+        "y": 240,
+        "width": 900,
+        "align": "left",
+        "weight": 700
+      },
+      {
+        "type": "text",
+        "content": "Tap to view",
+        "font": "Poppins",
+        "fontSize": 42,
+        "color": "#334155",
+        "x": 90,
+        "y": 1484,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "emoji",
+        "content": "✨",
+        "size": 90,
+        "x": 190,
+        "y": 170
+      },
+      {
+        "type": "emoji",
+        "content": "🎂",
+        "size": 80,
+        "x": 860,
+        "y": 210
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/balloons.svg",
+        "width": 270,
+        "height": 510,
+        "x": 720,
+        "y": 1180,
+        "rotation": -8
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/cake.svg",
+        "width": 240,
+        "height": 240,
+        "x": 90,
+        "y": 1320,
+        "rotation": -6
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/confetti.svg",
+        "width": 860,
+        "height": 260,
+        "x": 120,
+        "y": 1580,
+        "rotation": 0
+      }
+    ]
+  },
+  {
+    "id": "birthday_07",
+    "category": "birthday",
+    "name": "Birthday Template 07",
+    "background": "/story_templates/custom/backgrounds/bg_008.jpg",
+    "overlay": "rgba(15, 23, 42, 0.1)",
+    "elements": [
+      {
+        "type": "shape",
+        "color": "#f8fafc",
+        "opacity": 0.46,
+        "x": 70,
+        "y": 182,
+        "width": 940,
+        "height": 350,
+        "radius": 44,
+        "rotation": -2
+      },
+      {
+        "type": "text",
+        "content": "Party mode: ON",
+        "font": "Poppins",
+        "fontSize": 78,
+        "color": "#1f2937",
+        "x": 90,
+        "y": 252,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "text",
+        "content": "Swipe for details",
+        "font": "Poppins",
+        "fontSize": 42,
+        "color": "#334155",
+        "x": 90,
+        "y": 1460,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "emoji",
+        "content": "💖",
+        "size": 90,
+        "x": 110,
+        "y": 130
+      },
+      {
+        "type": "emoji",
+        "content": "🎈",
+        "size": 80,
+        "x": 860,
+        "y": 240
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/balloons.svg",
+        "width": 270,
+        "height": 510,
+        "x": 720,
+        "y": 1180,
+        "rotation": 8
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/cake.svg",
+        "width": 240,
+        "height": 240,
+        "x": 90,
+        "y": 1320,
+        "rotation": -6
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/confetti.svg",
+        "width": 860,
+        "height": 260,
+        "x": 120,
+        "y": 1580,
+        "rotation": 0
+      }
+    ]
+  },
+  {
+    "id": "birthday_08",
+    "category": "birthday",
+    "name": "Birthday Template 08",
+    "background": "/story_templates/custom/backgrounds/bg_009.jpg",
+    "overlay": "rgba(15, 23, 42, 0.1)",
+    "elements": [
+      {
+        "type": "shape",
+        "color": "#f8fafc",
+        "opacity": 0.46,
+        "x": 70,
+        "y": 194,
+        "width": 940,
+        "height": 350,
+        "radius": 44,
+        "rotation": 2
+      },
+      {
+        "type": "text",
+        "content": "Born to shine brighter",
+        "font": "Montserrat",
+        "fontSize": 78,
+        "color": "#1f2937",
+        "x": 90,
+        "y": 264,
+        "width": 900,
+        "align": "left",
+        "weight": 700
+      },
+      {
+        "type": "text",
+        "content": "Reply now",
+        "font": "Poppins",
+        "fontSize": 42,
+        "color": "#334155",
+        "x": 90,
+        "y": 1472,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "emoji",
+        "content": "🎉",
+        "size": 90,
+        "x": 150,
+        "y": 170
+      },
+      {
+        "type": "emoji",
+        "content": "🥳",
+        "size": 80,
+        "x": 860,
+        "y": 270
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/balloons.svg",
+        "width": 270,
+        "height": 510,
+        "x": 720,
+        "y": 1180,
+        "rotation": -8
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/cake.svg",
+        "width": 240,
+        "height": 240,
+        "x": 90,
+        "y": 1320,
+        "rotation": -6
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/confetti.svg",
+        "width": 860,
+        "height": 260,
+        "x": 120,
+        "y": 1580,
+        "rotation": 0
+      }
+    ]
+  },
+  {
+    "id": "birthday_09",
+    "category": "birthday",
+    "name": "Birthday Template 09",
+    "background": "/story_templates/custom/backgrounds/bg_010.jpg",
+    "overlay": "rgba(15, 23, 42, 0.1)",
+    "elements": [
+      {
+        "type": "shape",
+        "color": "#f8fafc",
+        "opacity": 0.46,
+        "x": 70,
+        "y": 206,
+        "width": 940,
+        "height": 350,
+        "radius": 44,
+        "rotation": -2
+      },
+      {
+        "type": "text",
+        "content": "Bestie birthday alert!",
+        "font": "Bebas Neue",
+        "fontSize": 78,
+        "color": "#1f2937",
+        "x": 90,
+        "y": 276,
+        "width": 900,
+        "align": "left",
+        "weight": 700
+      },
+      {
+        "type": "text",
+        "content": "DM for link",
+        "font": "Poppins",
+        "fontSize": 42,
+        "color": "#334155",
+        "x": 90,
+        "y": 1484,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "emoji",
+        "content": "🎂",
+        "size": 90,
+        "x": 190,
+        "y": 130
+      },
+      {
+        "type": "emoji",
+        "content": "🎁",
+        "size": 80,
+        "x": 860,
+        "y": 180
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/balloons.svg",
+        "width": 270,
+        "height": 510,
+        "x": 720,
+        "y": 1180,
+        "rotation": 8
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/cake.svg",
+        "width": 240,
+        "height": 240,
+        "x": 90,
+        "y": 1320,
+        "rotation": -6
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/confetti.svg",
+        "width": 860,
+        "height": 260,
+        "x": 120,
+        "y": 1580,
+        "rotation": 0
+      }
+    ]
+  },
+  {
+    "id": "birthday_10",
+    "category": "birthday",
+    "name": "Birthday Template 10",
+    "background": "/story_templates/custom/backgrounds/bg_011.jpg",
+    "overlay": "rgba(15, 23, 42, 0.1)",
+    "elements": [
+      {
+        "type": "shape",
+        "color": "#f8fafc",
+        "opacity": 0.46,
+        "x": 70,
+        "y": 218,
+        "width": 940,
+        "height": 350,
+        "radius": 44,
+        "rotation": 2
+      },
+      {
+        "type": "text",
+        "content": "Celebrate every tiny win",
+        "font": "Poppins",
+        "fontSize": 78,
+        "color": "#1f2937",
+        "x": 90,
+        "y": 288,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "text",
+        "content": "Join today",
+        "font": "Poppins",
+        "fontSize": 42,
+        "color": "#334155",
+        "x": 90,
+        "y": 1460,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "emoji",
+        "content": "🎈",
+        "size": 90,
+        "x": 110,
+        "y": 170
+      },
+      {
+        "type": "emoji",
+        "content": "✨",
+        "size": 80,
+        "x": 860,
+        "y": 210
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/balloons.svg",
+        "width": 270,
+        "height": 510,
+        "x": 720,
+        "y": 1180,
+        "rotation": -8
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/cake.svg",
+        "width": 240,
+        "height": 240,
+        "x": 90,
+        "y": 1320,
+        "rotation": -6
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/confetti.svg",
+        "width": 860,
+        "height": 260,
+        "x": 120,
+        "y": 1580,
+        "rotation": 0
+      }
+    ]
+  },
+  {
+    "id": "aesthetic_01",
+    "category": "aesthetic",
+    "name": "Aesthetic Template 01",
+    "background": "/story_templates/custom/backgrounds/bg_012.jpg",
+    "overlay": "rgba(15, 23, 42, 0.1)",
+    "elements": [
+      {
+        "type": "shape",
+        "color": "#f8fafc",
+        "opacity": 0.46,
+        "x": 70,
+        "y": 170,
+        "width": 940,
+        "height": 350,
+        "radius": 44,
+        "rotation": -2
+      },
+      {
+        "type": "text",
+        "content": "Soft mornings and calm energy",
+        "font": "Playfair Display",
+        "fontSize": 78,
+        "color": "#1f2937",
+        "x": 90,
+        "y": 240,
+        "width": 900,
+        "align": "center",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "content": "Tap to view",
+        "font": "Poppins",
+        "fontSize": 42,
+        "color": "#334155",
+        "x": 90,
+        "y": 1460,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "emoji",
+        "content": "✨",
+        "size": 72,
+        "x": 140,
+        "y": 170
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/sparkles.svg",
+        "width": 180,
+        "height": 180,
+        "x": 770,
+        "y": 290,
+        "rotation": 8
+      },
+      {
+        "type": "shape",
+        "color": "#ffffff",
+        "opacity": 0.32,
+        "x": 140,
+        "y": 1220,
+        "width": 800,
+        "height": 220,
+        "radius": 80,
+        "rotation": 0
+      }
+    ]
+  },
+  {
+    "id": "aesthetic_02",
+    "category": "aesthetic",
+    "name": "Aesthetic Template 02",
+    "background": "/story_templates/custom/backgrounds/bg_013.jpg",
+    "overlay": "rgba(15, 23, 42, 0.1)",
+    "elements": [
+      {
+        "type": "shape",
+        "color": "#f8fafc",
+        "opacity": 0.46,
+        "x": 70,
+        "y": 182,
+        "width": 940,
+        "height": 350,
+        "radius": 44,
+        "rotation": 2
+      },
+      {
+        "type": "text",
+        "content": "Curated moments, gentle pace",
+        "font": "Montserrat",
+        "fontSize": 78,
+        "color": "#1f2937",
+        "x": 90,
+        "y": 252,
+        "width": 900,
+        "align": "left",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "content": "Swipe for details",
+        "font": "Poppins",
+        "fontSize": 42,
+        "color": "#334155",
+        "x": 90,
+        "y": 1472,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "emoji",
+        "content": "✨",
+        "size": 72,
+        "x": 140,
+        "y": 170
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/sparkles.svg",
+        "width": 180,
+        "height": 180,
+        "x": 770,
+        "y": 290,
+        "rotation": 8
+      },
+      {
+        "type": "shape",
+        "color": "#ffffff",
+        "opacity": 0.32,
+        "x": 140,
+        "y": 1220,
+        "width": 800,
+        "height": 220,
+        "radius": 80,
+        "rotation": 0
+      }
+    ]
+  },
+  {
+    "id": "aesthetic_03",
+    "category": "aesthetic",
+    "name": "Aesthetic Template 03",
+    "background": "/story_templates/custom/backgrounds/bg_014.jpg",
+    "overlay": "rgba(15, 23, 42, 0.1)",
+    "elements": [
+      {
+        "type": "shape",
+        "color": "#f8fafc",
+        "opacity": 0.46,
+        "x": 70,
+        "y": 194,
+        "width": 940,
+        "height": 350,
+        "radius": 44,
+        "rotation": -2
+      },
+      {
+        "type": "text",
+        "content": "A little romance in every frame",
+        "font": "Poppins",
+        "fontSize": 78,
+        "color": "#1f2937",
+        "x": 90,
+        "y": 264,
+        "width": 900,
+        "align": "left",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "content": "Reply now",
+        "font": "Poppins",
+        "fontSize": 42,
+        "color": "#334155",
+        "x": 90,
+        "y": 1484,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "emoji",
+        "content": "✨",
+        "size": 72,
+        "x": 140,
+        "y": 170
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/sparkles.svg",
+        "width": 180,
+        "height": 180,
+        "x": 770,
+        "y": 290,
+        "rotation": 8
+      },
+      {
+        "type": "shape",
+        "color": "#ffffff",
+        "opacity": 0.32,
+        "x": 140,
+        "y": 1220,
+        "width": 800,
+        "height": 220,
+        "radius": 80,
+        "rotation": 0
+      }
+    ]
+  },
+  {
+    "id": "aesthetic_04",
+    "category": "aesthetic",
+    "name": "Aesthetic Template 04",
+    "background": "/story_templates/custom/backgrounds/bg_015.svg",
+    "overlay": "rgba(15, 23, 42, 0.1)",
+    "elements": [
+      {
+        "type": "shape",
+        "color": "#f8fafc",
+        "opacity": 0.46,
+        "x": 70,
+        "y": 206,
+        "width": 940,
+        "height": 350,
+        "radius": 44,
+        "rotation": 2
+      },
+      {
+        "type": "text",
+        "content": "Quiet beauty, loud impact",
+        "font": "Playfair Display",
+        "fontSize": 78,
+        "color": "#1f2937",
+        "x": 90,
+        "y": 276,
+        "width": 900,
+        "align": "center",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "content": "DM for link",
+        "font": "Poppins",
+        "fontSize": 42,
+        "color": "#334155",
+        "x": 90,
+        "y": 1460,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "emoji",
+        "content": "✨",
+        "size": 72,
+        "x": 140,
+        "y": 170
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/sparkles.svg",
+        "width": 180,
+        "height": 180,
+        "x": 770,
+        "y": 290,
+        "rotation": 8
+      },
+      {
+        "type": "shape",
+        "color": "#ffffff",
+        "opacity": 0.32,
+        "x": 140,
+        "y": 1220,
+        "width": 800,
+        "height": 220,
+        "radius": 80,
+        "rotation": 0
+      }
+    ]
+  },
+  {
+    "id": "aesthetic_05",
+    "category": "aesthetic",
+    "name": "Aesthetic Template 05",
+    "background": "/story_templates/custom/backgrounds/bg_016.svg",
+    "overlay": "rgba(15, 23, 42, 0.1)",
+    "elements": [
+      {
+        "type": "shape",
+        "color": "#f8fafc",
+        "opacity": 0.46,
+        "x": 70,
+        "y": 218,
+        "width": 940,
+        "height": 350,
+        "radius": 44,
+        "rotation": -2
+      },
+      {
+        "type": "text",
+        "content": "Moodboard in motion",
+        "font": "Montserrat",
+        "fontSize": 78,
+        "color": "#1f2937",
+        "x": 90,
+        "y": 288,
+        "width": 900,
+        "align": "left",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "content": "Join today",
+        "font": "Poppins",
+        "fontSize": 42,
+        "color": "#334155",
+        "x": 90,
+        "y": 1472,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "emoji",
+        "content": "✨",
+        "size": 72,
+        "x": 140,
+        "y": 170
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/sparkles.svg",
+        "width": 180,
+        "height": 180,
+        "x": 770,
+        "y": 290,
+        "rotation": 8
+      },
+      {
+        "type": "shape",
+        "color": "#ffffff",
+        "opacity": 0.32,
+        "x": 140,
+        "y": 1220,
+        "width": 800,
+        "height": 220,
+        "radius": 80,
+        "rotation": 0
+      }
+    ]
+  },
+  {
+    "id": "aesthetic_06",
+    "category": "aesthetic",
+    "name": "Aesthetic Template 06",
+    "background": "/story_templates/custom/backgrounds/bg_017.svg",
+    "overlay": "rgba(15, 23, 42, 0.1)",
+    "elements": [
+      {
+        "type": "shape",
+        "color": "#f8fafc",
+        "opacity": 0.46,
+        "x": 70,
+        "y": 170,
+        "width": 940,
+        "height": 350,
+        "radius": 44,
+        "rotation": 2
+      },
+      {
+        "type": "text",
+        "content": "Sundown tones and slow thoughts",
+        "font": "Poppins",
+        "fontSize": 78,
+        "color": "#1f2937",
+        "x": 90,
+        "y": 240,
+        "width": 900,
+        "align": "left",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "content": "Tap to view",
+        "font": "Poppins",
+        "fontSize": 42,
+        "color": "#334155",
+        "x": 90,
+        "y": 1484,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "emoji",
+        "content": "✨",
+        "size": 72,
+        "x": 140,
+        "y": 170
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/sparkles.svg",
+        "width": 180,
+        "height": 180,
+        "x": 770,
+        "y": 290,
+        "rotation": 8
+      },
+      {
+        "type": "shape",
+        "color": "#ffffff",
+        "opacity": 0.32,
+        "x": 140,
+        "y": 1220,
+        "width": 800,
+        "height": 220,
+        "radius": 80,
+        "rotation": 0
+      }
+    ]
+  },
+  {
+    "id": "aesthetic_07",
+    "category": "aesthetic",
+    "name": "Aesthetic Template 07",
+    "background": "/story_templates/custom/backgrounds/bg_018.jpg",
+    "overlay": "rgba(15, 23, 42, 0.1)",
+    "elements": [
+      {
+        "type": "shape",
+        "color": "#f8fafc",
+        "opacity": 0.46,
+        "x": 70,
+        "y": 182,
+        "width": 940,
+        "height": 350,
+        "radius": 44,
+        "rotation": -2
+      },
+      {
+        "type": "text",
+        "content": "Delicate details matter most",
+        "font": "Playfair Display",
+        "fontSize": 78,
+        "color": "#1f2937",
+        "x": 90,
+        "y": 252,
+        "width": 900,
+        "align": "center",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "content": "Swipe for details",
+        "font": "Poppins",
+        "fontSize": 42,
+        "color": "#334155",
+        "x": 90,
+        "y": 1460,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "emoji",
+        "content": "✨",
+        "size": 72,
+        "x": 140,
+        "y": 170
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/sparkles.svg",
+        "width": 180,
+        "height": 180,
+        "x": 770,
+        "y": 290,
+        "rotation": 8
+      },
+      {
+        "type": "shape",
+        "color": "#ffffff",
+        "opacity": 0.32,
+        "x": 140,
+        "y": 1220,
+        "width": 800,
+        "height": 220,
+        "radius": 80,
+        "rotation": 0
+      }
+    ]
+  },
+  {
+    "id": "aesthetic_08",
+    "category": "aesthetic",
+    "name": "Aesthetic Template 08",
+    "background": "/story_templates/custom/backgrounds/bg_019.jpg",
+    "overlay": "rgba(15, 23, 42, 0.1)",
+    "elements": [
+      {
+        "type": "shape",
+        "color": "#f8fafc",
+        "opacity": 0.46,
+        "x": 70,
+        "y": 194,
+        "width": 940,
+        "height": 350,
+        "radius": 44,
+        "rotation": 2
+      },
+      {
+        "type": "text",
+        "content": "Less noise, more presence",
+        "font": "Montserrat",
+        "fontSize": 78,
+        "color": "#1f2937",
+        "x": 90,
+        "y": 264,
+        "width": 900,
+        "align": "left",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "content": "Reply now",
+        "font": "Poppins",
+        "fontSize": 42,
+        "color": "#334155",
+        "x": 90,
+        "y": 1472,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "emoji",
+        "content": "✨",
+        "size": 72,
+        "x": 140,
+        "y": 170
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/sparkles.svg",
+        "width": 180,
+        "height": 180,
+        "x": 770,
+        "y": 290,
+        "rotation": 8
+      },
+      {
+        "type": "shape",
+        "color": "#ffffff",
+        "opacity": 0.32,
+        "x": 140,
+        "y": 1220,
+        "width": 800,
+        "height": 220,
+        "radius": 80,
+        "rotation": 0
+      }
+    ]
+  },
+  {
+    "id": "aesthetic_09",
+    "category": "aesthetic",
+    "name": "Aesthetic Template 09",
+    "background": "/story_templates/custom/backgrounds/bg_020.svg",
+    "overlay": "rgba(15, 23, 42, 0.1)",
+    "elements": [
+      {
+        "type": "shape",
+        "color": "#f8fafc",
+        "opacity": 0.46,
+        "x": 70,
+        "y": 206,
+        "width": 940,
+        "height": 350,
+        "radius": 44,
+        "rotation": -2
+      },
+      {
+        "type": "text",
+        "content": "Poise over pressure",
+        "font": "Poppins",
+        "fontSize": 78,
+        "color": "#1f2937",
+        "x": 90,
+        "y": 276,
+        "width": 900,
+        "align": "left",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "content": "DM for link",
+        "font": "Poppins",
+        "fontSize": 42,
+        "color": "#334155",
+        "x": 90,
+        "y": 1484,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "emoji",
+        "content": "✨",
+        "size": 72,
+        "x": 140,
+        "y": 170
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/sparkles.svg",
+        "width": 180,
+        "height": 180,
+        "x": 770,
+        "y": 290,
+        "rotation": 8
+      },
+      {
+        "type": "shape",
+        "color": "#ffffff",
+        "opacity": 0.32,
+        "x": 140,
+        "y": 1220,
+        "width": 800,
+        "height": 220,
+        "radius": 80,
+        "rotation": 0
+      }
+    ]
+  },
+  {
+    "id": "aesthetic_10",
+    "category": "aesthetic",
+    "name": "Aesthetic Template 10",
+    "background": "/story_templates/custom/backgrounds/bg_021.svg",
+    "overlay": "rgba(15, 23, 42, 0.1)",
+    "elements": [
+      {
+        "type": "shape",
+        "color": "#f8fafc",
+        "opacity": 0.46,
+        "x": 70,
+        "y": 218,
+        "width": 940,
+        "height": 350,
+        "radius": 44,
+        "rotation": 2
+      },
+      {
+        "type": "text",
+        "content": "Dream in neutral palettes",
+        "font": "Playfair Display",
+        "fontSize": 78,
+        "color": "#1f2937",
+        "x": 90,
+        "y": 288,
+        "width": 900,
+        "align": "center",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "content": "Join today",
+        "font": "Poppins",
+        "fontSize": 42,
+        "color": "#334155",
+        "x": 90,
+        "y": 1460,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "emoji",
+        "content": "✨",
+        "size": 72,
+        "x": 140,
+        "y": 170
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/sparkles.svg",
+        "width": 180,
+        "height": 180,
+        "x": 770,
+        "y": 290,
+        "rotation": 8
+      },
+      {
+        "type": "shape",
+        "color": "#ffffff",
+        "opacity": 0.32,
+        "x": 140,
+        "y": 1220,
+        "width": 800,
+        "height": 220,
+        "radius": 80,
+        "rotation": 0
+      }
+    ]
+  },
+  {
+    "id": "minimal_01",
+    "category": "minimal",
+    "name": "Minimal Template 01",
+    "background": "/story_templates/custom/backgrounds/bg_022.svg",
+    "overlay": "rgba(255, 255, 255, 0.08)",
+    "elements": [
+      {
+        "type": "shape",
+        "color": "#f8fafc",
+        "opacity": 0.76,
+        "x": 70,
+        "y": 170,
+        "width": 940,
+        "height": 350,
+        "radius": 44,
+        "rotation": -2
+      },
+      {
+        "type": "text",
+        "content": "Keep it clean",
+        "font": "Montserrat",
+        "fontSize": 64,
+        "color": "#111827",
+        "x": 90,
+        "y": 240,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "text",
+        "content": "Tap to view",
+        "font": "Poppins",
+        "fontSize": 42,
+        "color": "#334155",
+        "x": 90,
+        "y": 1460,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "emoji",
+        "content": "✨",
+        "size": 54,
+        "x": 930,
+        "y": 320
+      },
+      {
+        "type": "shape",
+        "color": "#e2e8f0",
+        "opacity": 0.7,
+        "x": 140,
+        "y": 1260,
+        "width": 800,
+        "height": 8,
+        "radius": 4,
+        "rotation": 0
+      }
+    ]
+  },
+  {
+    "id": "minimal_02",
+    "category": "minimal",
+    "name": "Minimal Template 02",
+    "background": "/story_templates/custom/backgrounds/bg_023.jpg",
+    "overlay": "rgba(255, 255, 255, 0.08)",
+    "elements": [
+      {
+        "type": "shape",
+        "color": "#f8fafc",
+        "opacity": 0.76,
+        "x": 70,
+        "y": 182,
+        "width": 940,
+        "height": 350,
+        "radius": 44,
+        "rotation": 2
+      },
+      {
+        "type": "text",
+        "content": "Simple design, clear message",
+        "font": "Poppins",
+        "fontSize": 64,
+        "color": "#111827",
+        "x": 90,
+        "y": 252,
+        "width": 900,
+        "align": "left",
+        "weight": 700
+      },
+      {
+        "type": "text",
+        "content": "Swipe for details",
+        "font": "Poppins",
+        "fontSize": 42,
+        "color": "#334155",
+        "x": 90,
+        "y": 1472,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "emoji",
+        "content": "✨",
+        "size": 54,
+        "x": 930,
+        "y": 320
+      },
+      {
+        "type": "shape",
+        "color": "#e2e8f0",
+        "opacity": 0.7,
+        "x": 140,
+        "y": 1260,
+        "width": 800,
+        "height": 8,
+        "radius": 4,
+        "rotation": 0
+      }
+    ]
+  },
+  {
+    "id": "minimal_03",
+    "category": "minimal",
+    "name": "Minimal Template 03",
+    "background": "/story_templates/custom/backgrounds/bg_024.jpg",
+    "overlay": "rgba(255, 255, 255, 0.08)",
+    "elements": [
+      {
+        "type": "shape",
+        "color": "#f8fafc",
+        "opacity": 0.76,
+        "x": 70,
+        "y": 194,
+        "width": 940,
+        "height": 350,
+        "radius": 44,
+        "rotation": -2
+      },
+      {
+        "type": "text",
+        "content": "Focus on what matters",
+        "font": "Lato",
+        "fontSize": 64,
+        "color": "#111827",
+        "x": 90,
+        "y": 264,
+        "width": 900,
+        "align": "left",
+        "weight": 700
+      },
+      {
+        "type": "text",
+        "content": "Reply now",
+        "font": "Poppins",
+        "fontSize": 42,
+        "color": "#334155",
+        "x": 90,
+        "y": 1484,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "emoji",
+        "content": "✨",
+        "size": 54,
+        "x": 930,
+        "y": 320
+      },
+      {
+        "type": "shape",
+        "color": "#e2e8f0",
+        "opacity": 0.7,
+        "x": 140,
+        "y": 1260,
+        "width": 800,
+        "height": 8,
+        "radius": 4,
+        "rotation": 0
+      }
+    ]
+  },
+  {
+    "id": "minimal_04",
+    "category": "minimal",
+    "name": "Minimal Template 04",
+    "background": "/story_templates/custom/backgrounds/bg_025.jpg",
+    "overlay": "rgba(255, 255, 255, 0.08)",
+    "elements": [
+      {
+        "type": "shape",
+        "color": "#f8fafc",
+        "opacity": 0.76,
+        "x": 70,
+        "y": 206,
+        "width": 940,
+        "height": 350,
+        "radius": 44,
+        "rotation": 2
+      },
+      {
+        "type": "text",
+        "content": "Minimal but memorable",
+        "font": "Montserrat",
+        "fontSize": 64,
+        "color": "#111827",
+        "x": 90,
+        "y": 276,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "text",
+        "content": "DM for link",
+        "font": "Poppins",
+        "fontSize": 42,
+        "color": "#334155",
+        "x": 90,
+        "y": 1460,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "emoji",
+        "content": "✨",
+        "size": 54,
+        "x": 930,
+        "y": 320
+      },
+      {
+        "type": "shape",
+        "color": "#e2e8f0",
+        "opacity": 0.7,
+        "x": 140,
+        "y": 1260,
+        "width": 800,
+        "height": 8,
+        "radius": 4,
+        "rotation": 0
+      }
+    ]
+  },
+  {
+    "id": "minimal_05",
+    "category": "minimal",
+    "name": "Minimal Template 05",
+    "background": "/story_templates/custom/backgrounds/bg_026.svg",
+    "overlay": "rgba(255, 255, 255, 0.08)",
+    "elements": [
+      {
+        "type": "shape",
+        "color": "#f8fafc",
+        "opacity": 0.76,
+        "x": 70,
+        "y": 218,
+        "width": 940,
+        "height": 350,
+        "radius": 44,
+        "rotation": -2
+      },
+      {
+        "type": "text",
+        "content": "Less clutter, more clarity",
+        "font": "Poppins",
+        "fontSize": 64,
+        "color": "#111827",
+        "x": 90,
+        "y": 288,
+        "width": 900,
+        "align": "left",
+        "weight": 700
+      },
+      {
+        "type": "text",
+        "content": "Join today",
+        "font": "Poppins",
+        "fontSize": 42,
+        "color": "#334155",
+        "x": 90,
+        "y": 1472,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "emoji",
+        "content": "✨",
+        "size": 54,
+        "x": 930,
+        "y": 320
+      },
+      {
+        "type": "shape",
+        "color": "#e2e8f0",
+        "opacity": 0.7,
+        "x": 140,
+        "y": 1260,
+        "width": 800,
+        "height": 8,
+        "radius": 4,
+        "rotation": 0
+      }
+    ]
+  },
+  {
+    "id": "minimal_06",
+    "category": "minimal",
+    "name": "Minimal Template 06",
+    "background": "/story_templates/custom/backgrounds/bg_027.svg",
+    "overlay": "rgba(255, 255, 255, 0.08)",
+    "elements": [
+      {
+        "type": "shape",
+        "color": "#f8fafc",
+        "opacity": 0.76,
+        "x": 70,
+        "y": 170,
+        "width": 940,
+        "height": 350,
+        "radius": 44,
+        "rotation": 2
+      },
+      {
+        "type": "text",
+        "content": "Muted tones, sharp intent",
+        "font": "Lato",
+        "fontSize": 64,
+        "color": "#111827",
+        "x": 90,
+        "y": 240,
+        "width": 900,
+        "align": "left",
+        "weight": 700
+      },
+      {
+        "type": "text",
+        "content": "Tap to view",
+        "font": "Poppins",
+        "fontSize": 42,
+        "color": "#334155",
+        "x": 90,
+        "y": 1484,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "emoji",
+        "content": "✨",
+        "size": 54,
+        "x": 930,
+        "y": 320
+      },
+      {
+        "type": "shape",
+        "color": "#e2e8f0",
+        "opacity": 0.7,
+        "x": 140,
+        "y": 1260,
+        "width": 800,
+        "height": 8,
+        "radius": 4,
+        "rotation": 0
+      }
+    ]
+  },
+  {
+    "id": "minimal_07",
+    "category": "minimal",
+    "name": "Minimal Template 07",
+    "background": "/story_templates/custom/backgrounds/bg_028.jpg",
+    "overlay": "rgba(255, 255, 255, 0.08)",
+    "elements": [
+      {
+        "type": "shape",
+        "color": "#f8fafc",
+        "opacity": 0.76,
+        "x": 70,
+        "y": 182,
+        "width": 940,
+        "height": 350,
+        "radius": 44,
+        "rotation": -2
+      },
+      {
+        "type": "text",
+        "content": "Clean frame, bold idea",
+        "font": "Montserrat",
+        "fontSize": 64,
+        "color": "#111827",
+        "x": 90,
+        "y": 252,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "text",
+        "content": "Swipe for details",
+        "font": "Poppins",
+        "fontSize": 42,
+        "color": "#334155",
+        "x": 90,
+        "y": 1460,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "emoji",
+        "content": "✨",
+        "size": 54,
+        "x": 930,
+        "y": 320
+      },
+      {
+        "type": "shape",
+        "color": "#e2e8f0",
+        "opacity": 0.7,
+        "x": 140,
+        "y": 1260,
+        "width": 800,
+        "height": 8,
+        "radius": 4,
+        "rotation": 0
+      }
+    ]
+  },
+  {
+    "id": "minimal_08",
+    "category": "minimal",
+    "name": "Minimal Template 08",
+    "background": "/story_templates/custom/backgrounds/bg_029.jpg",
+    "overlay": "rgba(255, 255, 255, 0.08)",
+    "elements": [
+      {
+        "type": "shape",
+        "color": "#f8fafc",
+        "opacity": 0.76,
+        "x": 70,
+        "y": 194,
+        "width": 940,
+        "height": 350,
+        "radius": 44,
+        "rotation": 2
+      },
+      {
+        "type": "text",
+        "content": "Whitespace is a feature",
+        "font": "Poppins",
+        "fontSize": 64,
+        "color": "#111827",
+        "x": 90,
+        "y": 264,
+        "width": 900,
+        "align": "left",
+        "weight": 700
+      },
+      {
+        "type": "text",
+        "content": "Reply now",
+        "font": "Poppins",
+        "fontSize": 42,
+        "color": "#334155",
+        "x": 90,
+        "y": 1472,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "emoji",
+        "content": "✨",
+        "size": 54,
+        "x": 930,
+        "y": 320
+      },
+      {
+        "type": "shape",
+        "color": "#e2e8f0",
+        "opacity": 0.7,
+        "x": 140,
+        "y": 1260,
+        "width": 800,
+        "height": 8,
+        "radius": 4,
+        "rotation": 0
+      }
+    ]
+  },
+  {
+    "id": "minimal_09",
+    "category": "minimal",
+    "name": "Minimal Template 09",
+    "background": "/story_templates/custom/backgrounds/bg_030.jpg",
+    "overlay": "rgba(255, 255, 255, 0.08)",
+    "elements": [
+      {
+        "type": "shape",
+        "color": "#f8fafc",
+        "opacity": 0.76,
+        "x": 70,
+        "y": 206,
+        "width": 940,
+        "height": 350,
+        "radius": 44,
+        "rotation": -2
+      },
+      {
+        "type": "text",
+        "content": "Refined and ready",
+        "font": "Lato",
+        "fontSize": 64,
+        "color": "#111827",
+        "x": 90,
+        "y": 276,
+        "width": 900,
+        "align": "left",
+        "weight": 700
+      },
+      {
+        "type": "text",
+        "content": "DM for link",
+        "font": "Poppins",
+        "fontSize": 42,
+        "color": "#334155",
+        "x": 90,
+        "y": 1484,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "emoji",
+        "content": "✨",
+        "size": 54,
+        "x": 930,
+        "y": 320
+      },
+      {
+        "type": "shape",
+        "color": "#e2e8f0",
+        "opacity": 0.7,
+        "x": 140,
+        "y": 1260,
+        "width": 800,
+        "height": 8,
+        "radius": 4,
+        "rotation": 0
+      }
+    ]
+  },
+  {
+    "id": "minimal_10",
+    "category": "minimal",
+    "name": "Minimal Template 10",
+    "background": "/story_templates/custom/backgrounds/bg_031.jpg",
+    "overlay": "rgba(255, 255, 255, 0.08)",
+    "elements": [
+      {
+        "type": "shape",
+        "color": "#f8fafc",
+        "opacity": 0.76,
+        "x": 70,
+        "y": 218,
+        "width": 940,
+        "height": 350,
+        "radius": 44,
+        "rotation": 2
+      },
+      {
+        "type": "text",
+        "content": "Quiet layout, strong voice",
+        "font": "Montserrat",
+        "fontSize": 64,
+        "color": "#111827",
+        "x": 90,
+        "y": 288,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "text",
+        "content": "Join today",
+        "font": "Poppins",
+        "fontSize": 42,
+        "color": "#334155",
+        "x": 90,
+        "y": 1460,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "emoji",
+        "content": "✨",
+        "size": 54,
+        "x": 930,
+        "y": 320
+      },
+      {
+        "type": "shape",
+        "color": "#e2e8f0",
+        "opacity": 0.7,
+        "x": 140,
+        "y": 1260,
+        "width": 800,
+        "height": 8,
+        "radius": 4,
+        "rotation": 0
+      }
+    ]
+  },
+  {
+    "id": "quote_01",
+    "category": "quote",
+    "name": "Quote Template 01",
+    "background": "/story_templates/custom/backgrounds/bg_032.jpg",
+    "overlay": "rgba(15, 23, 42, 0.12)",
+    "elements": [
+      {
+        "type": "shape",
+        "color": "#f8fafc",
+        "opacity": 0.46,
+        "x": 70,
+        "y": 170,
+        "width": 940,
+        "height": 350,
+        "radius": 44,
+        "rotation": -2
+      },
+      {
+        "type": "text",
+        "content": "Discipline builds freedom.",
+        "font": "Playfair Display",
+        "fontSize": 70,
+        "color": "#1f2937",
+        "x": 90,
+        "y": 240,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "text",
+        "content": "Tap to view",
+        "font": "Poppins",
+        "fontSize": 42,
+        "color": "#334155",
+        "x": 90,
+        "y": 1460,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "emoji",
+        "content": "💭",
+        "size": 84,
+        "x": 130,
+        "y": 145
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/sparkles.svg",
+        "width": 150,
+        "height": 150,
+        "x": 820,
+        "y": 250,
+        "rotation": 0
+      }
+    ]
+  },
+  {
+    "id": "quote_02",
+    "category": "quote",
+    "name": "Quote Template 02",
+    "background": "/story_templates/custom/backgrounds/bg_033.jpg",
+    "overlay": "rgba(15, 23, 42, 0.12)",
+    "elements": [
+      {
+        "type": "shape",
+        "color": "#f8fafc",
+        "opacity": 0.46,
+        "x": 70,
+        "y": 182,
+        "width": 940,
+        "height": 350,
+        "radius": 44,
+        "rotation": 2
+      },
+      {
+        "type": "text",
+        "content": "Progress compounds when repeated.",
+        "font": "Poppins",
+        "fontSize": 70,
+        "color": "#1f2937",
+        "x": 90,
+        "y": 252,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "text",
+        "content": "Swipe for details",
+        "font": "Poppins",
+        "fontSize": 42,
+        "color": "#334155",
+        "x": 90,
+        "y": 1472,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "emoji",
+        "content": "💭",
+        "size": 84,
+        "x": 130,
+        "y": 145
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/sparkles.svg",
+        "width": 150,
+        "height": 150,
+        "x": 820,
+        "y": 250,
+        "rotation": 0
+      }
+    ]
+  },
+  {
+    "id": "quote_03",
+    "category": "quote",
+    "name": "Quote Template 03",
+    "background": "/story_templates/custom/backgrounds/bg_034.jpg",
+    "overlay": "rgba(15, 23, 42, 0.12)",
+    "elements": [
+      {
+        "type": "shape",
+        "color": "#f8fafc",
+        "opacity": 0.46,
+        "x": 70,
+        "y": 194,
+        "width": 940,
+        "height": 350,
+        "radius": 44,
+        "rotation": -2
+      },
+      {
+        "type": "text",
+        "content": "Start small. Stay consistent.",
+        "font": "Montserrat",
+        "fontSize": 70,
+        "color": "#1f2937",
+        "x": 90,
+        "y": 264,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "text",
+        "content": "Reply now",
+        "font": "Poppins",
+        "fontSize": 42,
+        "color": "#334155",
+        "x": 90,
+        "y": 1484,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "emoji",
+        "content": "💭",
+        "size": 84,
+        "x": 130,
+        "y": 145
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/sparkles.svg",
+        "width": 150,
+        "height": 150,
+        "x": 820,
+        "y": 250,
+        "rotation": 0
+      }
+    ]
+  },
+  {
+    "id": "quote_04",
+    "category": "quote",
+    "name": "Quote Template 04",
+    "background": "/story_templates/custom/backgrounds/bg_035.jpg",
+    "overlay": "rgba(15, 23, 42, 0.12)",
+    "elements": [
+      {
+        "type": "shape",
+        "color": "#f8fafc",
+        "opacity": 0.46,
+        "x": 70,
+        "y": 206,
+        "width": 940,
+        "height": 350,
+        "radius": 44,
+        "rotation": 2
+      },
+      {
+        "type": "text",
+        "content": "Clarity is a growth strategy.",
+        "font": "Playfair Display",
+        "fontSize": 70,
+        "color": "#1f2937",
+        "x": 90,
+        "y": 276,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "text",
+        "content": "DM for link",
+        "font": "Poppins",
+        "fontSize": 42,
+        "color": "#334155",
+        "x": 90,
+        "y": 1460,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "emoji",
+        "content": "💭",
+        "size": 84,
+        "x": 130,
+        "y": 145
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/sparkles.svg",
+        "width": 150,
+        "height": 150,
+        "x": 820,
+        "y": 250,
+        "rotation": 0
+      }
+    ]
+  },
+  {
+    "id": "quote_05",
+    "category": "quote",
+    "name": "Quote Template 05",
+    "background": "/story_templates/custom/backgrounds/bg_036.jpg",
+    "overlay": "rgba(15, 23, 42, 0.12)",
+    "elements": [
+      {
+        "type": "shape",
+        "color": "#f8fafc",
+        "opacity": 0.46,
+        "x": 70,
+        "y": 218,
+        "width": 940,
+        "height": 350,
+        "radius": 44,
+        "rotation": -2
+      },
+      {
+        "type": "text",
+        "content": "Make it useful, then make it pretty.",
+        "font": "Poppins",
+        "fontSize": 70,
+        "color": "#1f2937",
+        "x": 90,
+        "y": 288,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "text",
+        "content": "Join today",
+        "font": "Poppins",
+        "fontSize": 42,
+        "color": "#334155",
+        "x": 90,
+        "y": 1472,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "emoji",
+        "content": "💭",
+        "size": 84,
+        "x": 130,
+        "y": 145
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/sparkles.svg",
+        "width": 150,
+        "height": 150,
+        "x": 820,
+        "y": 250,
+        "rotation": 0
+      }
+    ]
+  },
+  {
+    "id": "poll_01",
+    "category": "poll",
+    "name": "Poll Template 01",
+    "background": "/story_templates/custom/backgrounds/bg_037.jpg",
+    "overlay": "rgba(15, 23, 42, 0.1)",
+    "elements": [
+      {
+        "type": "shape",
+        "color": "#f8fafc",
+        "opacity": 0.46,
+        "x": 70,
+        "y": 170,
+        "width": 940,
+        "height": 350,
+        "radius": 44,
+        "rotation": -2
+      },
+      {
+        "type": "text",
+        "content": "Which style wins today?",
+        "font": "Poppins",
+        "fontSize": 78,
+        "color": "#1f2937",
+        "x": 90,
+        "y": 240,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "text",
+        "content": "Tap to view",
+        "font": "Poppins",
+        "fontSize": 42,
+        "color": "#334155",
+        "x": 90,
+        "y": 1460,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "emoji",
+        "content": "❓",
+        "size": 90,
+        "x": 120,
+        "y": 140
+      },
+      {
+        "type": "shape",
+        "color": "#ffffff",
+        "opacity": 0.82,
+        "x": 140,
+        "y": 980,
+        "width": 800,
+        "height": 170,
+        "radius": 24,
+        "rotation": 0
+      },
+      {
+        "type": "shape",
+        "color": "#ffffff",
+        "opacity": 0.82,
+        "x": 140,
+        "y": 1180,
+        "width": 800,
+        "height": 170,
+        "radius": 24,
+        "rotation": 0
+      },
+      {
+        "type": "text",
+        "content": "Option A",
+        "font": "Poppins",
+        "fontSize": 52,
+        "color": "#0f172a",
+        "x": 180,
+        "y": 1080,
+        "width": 720,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "text",
+        "content": "Option B",
+        "font": "Poppins",
+        "fontSize": 52,
+        "color": "#0f172a",
+        "x": 180,
+        "y": 1280,
+        "width": 720,
+        "align": "center",
+        "weight": 700
+      }
+    ]
+  },
+  {
+    "id": "poll_02",
+    "category": "poll",
+    "name": "Poll Template 02",
+    "background": "/story_templates/custom/backgrounds/bg_038.jpg",
+    "overlay": "rgba(15, 23, 42, 0.1)",
+    "elements": [
+      {
+        "type": "shape",
+        "color": "#f8fafc",
+        "opacity": 0.46,
+        "x": 70,
+        "y": 182,
+        "width": 940,
+        "height": 350,
+        "radius": 44,
+        "rotation": 2
+      },
+      {
+        "type": "text",
+        "content": "Morning routine or night routine?",
+        "font": "Montserrat",
+        "fontSize": 78,
+        "color": "#1f2937",
+        "x": 90,
+        "y": 252,
+        "width": 900,
+        "align": "left",
+        "weight": 700
+      },
+      {
+        "type": "text",
+        "content": "Swipe for details",
+        "font": "Poppins",
+        "fontSize": 42,
+        "color": "#334155",
+        "x": 90,
+        "y": 1472,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "emoji",
+        "content": "❓",
+        "size": 90,
+        "x": 120,
+        "y": 140
+      },
+      {
+        "type": "shape",
+        "color": "#ffffff",
+        "opacity": 0.82,
+        "x": 140,
+        "y": 980,
+        "width": 800,
+        "height": 170,
+        "radius": 24,
+        "rotation": 0
+      },
+      {
+        "type": "shape",
+        "color": "#ffffff",
+        "opacity": 0.82,
+        "x": 140,
+        "y": 1180,
+        "width": 800,
+        "height": 170,
+        "radius": 24,
+        "rotation": 0
+      },
+      {
+        "type": "text",
+        "content": "Option A",
+        "font": "Poppins",
+        "fontSize": 52,
+        "color": "#0f172a",
+        "x": 180,
+        "y": 1080,
+        "width": 720,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "text",
+        "content": "Option B",
+        "font": "Poppins",
+        "fontSize": 52,
+        "color": "#0f172a",
+        "x": 180,
+        "y": 1280,
+        "width": 720,
+        "align": "center",
+        "weight": 700
+      }
+    ]
+  },
+  {
+    "id": "poll_03",
+    "category": "poll",
+    "name": "Poll Template 03",
+    "background": "/story_templates/custom/backgrounds/bg_039.svg",
+    "overlay": "rgba(15, 23, 42, 0.1)",
+    "elements": [
+      {
+        "type": "shape",
+        "color": "#f8fafc",
+        "opacity": 0.46,
+        "x": 70,
+        "y": 194,
+        "width": 940,
+        "height": 350,
+        "radius": 44,
+        "rotation": -2
+      },
+      {
+        "type": "text",
+        "content": "Pick your favorite drop",
+        "font": "Bebas Neue",
+        "fontSize": 78,
+        "color": "#1f2937",
+        "x": 90,
+        "y": 264,
+        "width": 900,
+        "align": "left",
+        "weight": 700
+      },
+      {
+        "type": "text",
+        "content": "Reply now",
+        "font": "Poppins",
+        "fontSize": 42,
+        "color": "#334155",
+        "x": 90,
+        "y": 1484,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "emoji",
+        "content": "❓",
+        "size": 90,
+        "x": 120,
+        "y": 140
+      },
+      {
+        "type": "shape",
+        "color": "#ffffff",
+        "opacity": 0.82,
+        "x": 140,
+        "y": 980,
+        "width": 800,
+        "height": 170,
+        "radius": 24,
+        "rotation": 0
+      },
+      {
+        "type": "shape",
+        "color": "#ffffff",
+        "opacity": 0.82,
+        "x": 140,
+        "y": 1180,
+        "width": 800,
+        "height": 170,
+        "radius": 24,
+        "rotation": 0
+      },
+      {
+        "type": "text",
+        "content": "Option A",
+        "font": "Poppins",
+        "fontSize": 52,
+        "color": "#0f172a",
+        "x": 180,
+        "y": 1080,
+        "width": 720,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "text",
+        "content": "Option B",
+        "font": "Poppins",
+        "fontSize": 52,
+        "color": "#0f172a",
+        "x": 180,
+        "y": 1280,
+        "width": 720,
+        "align": "center",
+        "weight": 700
+      }
+    ]
+  },
+  {
+    "id": "poll_04",
+    "category": "poll",
+    "name": "Poll Template 04",
+    "background": "/story_templates/custom/backgrounds/bg_040.svg",
+    "overlay": "rgba(15, 23, 42, 0.1)",
+    "elements": [
+      {
+        "type": "shape",
+        "color": "#f8fafc",
+        "opacity": 0.46,
+        "x": 70,
+        "y": 206,
+        "width": 940,
+        "height": 350,
+        "radius": 44,
+        "rotation": 2
+      },
+      {
+        "type": "text",
+        "content": "Should we launch this color?",
+        "font": "Poppins",
+        "fontSize": 78,
+        "color": "#1f2937",
+        "x": 90,
+        "y": 276,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "text",
+        "content": "DM for link",
+        "font": "Poppins",
+        "fontSize": 42,
+        "color": "#334155",
+        "x": 90,
+        "y": 1460,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "emoji",
+        "content": "❓",
+        "size": 90,
+        "x": 120,
+        "y": 140
+      },
+      {
+        "type": "shape",
+        "color": "#ffffff",
+        "opacity": 0.82,
+        "x": 140,
+        "y": 980,
+        "width": 800,
+        "height": 170,
+        "radius": 24,
+        "rotation": 0
+      },
+      {
+        "type": "shape",
+        "color": "#ffffff",
+        "opacity": 0.82,
+        "x": 140,
+        "y": 1180,
+        "width": 800,
+        "height": 170,
+        "radius": 24,
+        "rotation": 0
+      },
+      {
+        "type": "text",
+        "content": "Option A",
+        "font": "Poppins",
+        "fontSize": 52,
+        "color": "#0f172a",
+        "x": 180,
+        "y": 1080,
+        "width": 720,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "text",
+        "content": "Option B",
+        "font": "Poppins",
+        "fontSize": 52,
+        "color": "#0f172a",
+        "x": 180,
+        "y": 1280,
+        "width": 720,
+        "align": "center",
+        "weight": 700
+      }
+    ]
+  },
+  {
+    "id": "poll_05",
+    "category": "poll",
+    "name": "Poll Template 05",
+    "background": "/story_templates/custom/backgrounds/bg_041.svg",
+    "overlay": "rgba(15, 23, 42, 0.1)",
+    "elements": [
+      {
+        "type": "shape",
+        "color": "#f8fafc",
+        "opacity": 0.46,
+        "x": 70,
+        "y": 218,
+        "width": 940,
+        "height": 350,
+        "radius": 44,
+        "rotation": -2
+      },
+      {
+        "type": "text",
+        "content": "What do you want next?",
+        "font": "Montserrat",
+        "fontSize": 78,
+        "color": "#1f2937",
+        "x": 90,
+        "y": 288,
+        "width": 900,
+        "align": "left",
+        "weight": 700
+      },
+      {
+        "type": "text",
+        "content": "Join today",
+        "font": "Poppins",
+        "fontSize": 42,
+        "color": "#334155",
+        "x": 90,
+        "y": 1472,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "emoji",
+        "content": "❓",
+        "size": 90,
+        "x": 120,
+        "y": 140
+      },
+      {
+        "type": "shape",
+        "color": "#ffffff",
+        "opacity": 0.82,
+        "x": 140,
+        "y": 980,
+        "width": 800,
+        "height": 170,
+        "radius": 24,
+        "rotation": 0
+      },
+      {
+        "type": "shape",
+        "color": "#ffffff",
+        "opacity": 0.82,
+        "x": 140,
+        "y": 1180,
+        "width": 800,
+        "height": 170,
+        "radius": 24,
+        "rotation": 0
+      },
+      {
+        "type": "text",
+        "content": "Option A",
+        "font": "Poppins",
+        "fontSize": 52,
+        "color": "#0f172a",
+        "x": 180,
+        "y": 1080,
+        "width": 720,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "text",
+        "content": "Option B",
+        "font": "Poppins",
+        "fontSize": 52,
+        "color": "#0f172a",
+        "x": 180,
+        "y": 1280,
+        "width": 720,
+        "align": "center",
+        "weight": 700
+      }
+    ]
+  },
+  {
+    "id": "engagement_01",
+    "category": "engagement",
+    "name": "Engagement Template 01",
+    "background": "/story_templates/custom/backgrounds/bg_042.jpg",
+    "overlay": "rgba(15, 23, 42, 0.1)",
+    "elements": [
+      {
+        "type": "shape",
+        "color": "#f8fafc",
+        "opacity": 0.46,
+        "x": 70,
+        "y": 170,
+        "width": 940,
+        "height": 350,
+        "radius": 44,
+        "rotation": -2
+      },
+      {
+        "type": "text",
+        "content": "Drop your opinion below",
+        "font": "Poppins",
+        "fontSize": 78,
+        "color": "#1f2937",
+        "x": 90,
+        "y": 240,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "text",
+        "content": "Tap to view",
+        "font": "Poppins",
+        "fontSize": 42,
+        "color": "#334155",
+        "x": 90,
+        "y": 1460,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "emoji",
+        "content": "✨",
+        "size": 86,
+        "x": 130,
+        "y": 140
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/confetti.svg",
+        "width": 900,
+        "height": 260,
+        "x": 90,
+        "y": 1500,
+        "rotation": 0
+      }
+    ]
+  },
+  {
+    "id": "engagement_02",
+    "category": "engagement",
+    "name": "Engagement Template 02",
+    "background": "/story_templates/custom/backgrounds/bg_043.jpg",
+    "overlay": "rgba(15, 23, 42, 0.1)",
+    "elements": [
+      {
+        "type": "shape",
+        "color": "#f8fafc",
+        "opacity": 0.46,
+        "x": 70,
+        "y": 182,
+        "width": 940,
+        "height": 350,
+        "radius": 44,
+        "rotation": 2
+      },
+      {
+        "type": "text",
+        "content": "Tag someone who needs this",
+        "font": "Montserrat",
+        "fontSize": 78,
+        "color": "#1f2937",
+        "x": 90,
+        "y": 252,
+        "width": 900,
+        "align": "left",
+        "weight": 700
+      },
+      {
+        "type": "text",
+        "content": "Swipe for details",
+        "font": "Poppins",
+        "fontSize": 42,
+        "color": "#334155",
+        "x": 90,
+        "y": 1472,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "emoji",
+        "content": "🔥",
+        "size": 86,
+        "x": 130,
+        "y": 140
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/confetti.svg",
+        "width": 900,
+        "height": 260,
+        "x": 90,
+        "y": 1500,
+        "rotation": 0
+      }
+    ]
+  },
+  {
+    "id": "engagement_03",
+    "category": "engagement",
+    "name": "Engagement Template 03",
+    "background": "/story_templates/custom/backgrounds/bg_044.jpg",
+    "overlay": "rgba(15, 23, 42, 0.1)",
+    "elements": [
+      {
+        "type": "shape",
+        "color": "#f8fafc",
+        "opacity": 0.46,
+        "x": 70,
+        "y": 194,
+        "width": 940,
+        "height": 350,
+        "radius": 44,
+        "rotation": -2
+      },
+      {
+        "type": "text",
+        "content": "Vote with an emoji reaction",
+        "font": "Raleway",
+        "fontSize": 78,
+        "color": "#1f2937",
+        "x": 90,
+        "y": 264,
+        "width": 900,
+        "align": "left",
+        "weight": 700
+      },
+      {
+        "type": "text",
+        "content": "Reply now",
+        "font": "Poppins",
+        "fontSize": 42,
+        "color": "#334155",
+        "x": 90,
+        "y": 1484,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "emoji",
+        "content": "💬",
+        "size": 86,
+        "x": 130,
+        "y": 140
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/confetti.svg",
+        "width": 900,
+        "height": 260,
+        "x": 90,
+        "y": 1500,
+        "rotation": 0
+      }
+    ]
+  },
+  {
+    "id": "engagement_04",
+    "category": "engagement",
+    "name": "Engagement Template 04",
+    "background": "/story_templates/custom/backgrounds/bg_045.svg",
+    "overlay": "rgba(15, 23, 42, 0.1)",
+    "elements": [
+      {
+        "type": "shape",
+        "color": "#f8fafc",
+        "opacity": 0.46,
+        "x": 70,
+        "y": 206,
+        "width": 940,
+        "height": 350,
+        "radius": 44,
+        "rotation": 2
+      },
+      {
+        "type": "text",
+        "content": "Reply with your biggest challenge",
+        "font": "Poppins",
+        "fontSize": 78,
+        "color": "#1f2937",
+        "x": 90,
+        "y": 276,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "text",
+        "content": "DM for link",
+        "font": "Poppins",
+        "fontSize": 42,
+        "color": "#334155",
+        "x": 90,
+        "y": 1460,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "emoji",
+        "content": "📣",
+        "size": 86,
+        "x": 130,
+        "y": 140
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/confetti.svg",
+        "width": 900,
+        "height": 260,
+        "x": 90,
+        "y": 1500,
+        "rotation": 0
+      }
+    ]
+  },
+  {
+    "id": "engagement_05",
+    "category": "engagement",
+    "name": "Engagement Template 05",
+    "background": "/story_templates/custom/backgrounds/bg_046.svg",
+    "overlay": "rgba(15, 23, 42, 0.1)",
+    "elements": [
+      {
+        "type": "shape",
+        "color": "#f8fafc",
+        "opacity": 0.46,
+        "x": 70,
+        "y": 218,
+        "width": 940,
+        "height": 350,
+        "radius": 44,
+        "rotation": -2
+      },
+      {
+        "type": "text",
+        "content": "Tell me your pick in one word",
+        "font": "Montserrat",
+        "fontSize": 78,
+        "color": "#1f2937",
+        "x": 90,
+        "y": 288,
+        "width": 900,
+        "align": "left",
+        "weight": 700
+      },
+      {
+        "type": "text",
+        "content": "Join today",
+        "font": "Poppins",
+        "fontSize": 42,
+        "color": "#334155",
+        "x": 90,
+        "y": 1472,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "emoji",
+        "content": "💖",
+        "size": 86,
+        "x": 130,
+        "y": 140
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/confetti.svg",
+        "width": 900,
+        "height": 260,
+        "x": 90,
+        "y": 1500,
+        "rotation": 0
+      }
+    ]
+  },
+  {
+    "id": "promotional_01",
+    "category": "promotional",
+    "name": "Promotional Template 01",
+    "background": "/story_templates/custom/backgrounds/bg_056.jpg",
+    "overlay": "rgba(15, 23, 42, 0.28)",
+    "elements": [
+      {
+        "type": "shape",
+        "color": "#ffffff",
+        "opacity": 0.46,
+        "x": 70,
+        "y": 170,
+        "width": 940,
+        "height": 310,
+        "radius": 44,
+        "rotation": -2
+      },
+      {
+        "type": "text",
+        "content": "New Drop",
+        "font": "Bebas Neue",
+        "fontSize": 78,
+        "color": "#0f172a",
+        "x": 90,
+        "y": 240,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "text",
+        "content": "Tap to view",
+        "font": "Poppins",
+        "fontSize": 42,
+        "color": "#ffffff",
+        "x": 90,
+        "y": 1460,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "emoji",
+        "content": "🔥",
+        "size": 88,
+        "x": 130,
+        "y": 145
+      },
+      {
+        "type": "image",
+        "role": "photo",
+        "src": "",
+        "width": 860,
+        "height": 760,
+        "x": 110,
+        "y": 560,
+        "rotation": 0
+      },
+      {
+        "type": "shape",
+        "color": "#0f172a",
+        "opacity": 0.28,
+        "x": 70,
+        "y": 1400,
+        "width": 940,
+        "height": 340,
+        "radius": 34,
+        "rotation": 0
+      },
+      {
+        "type": "text",
+        "content": "Reply now",
+        "font": "Montserrat",
+        "fontSize": 48,
+        "color": "#ffffff",
+        "x": 120,
+        "y": 1580,
+        "width": 840,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/sparkles.svg",
+        "width": 180,
+        "height": 180,
+        "x": 820,
+        "y": 1340,
+        "rotation": 10
+      }
+    ]
+  },
+  {
+    "id": "promotional_02",
+    "category": "promotional",
+    "name": "Promotional Template 02",
+    "background": "/story_templates/custom/backgrounds/bg_057.jpg",
+    "overlay": "rgba(15, 23, 42, 0.28)",
+    "elements": [
+      {
+        "type": "shape",
+        "color": "#ffffff",
+        "opacity": 0.46,
+        "x": 70,
+        "y": 182,
+        "width": 940,
+        "height": 310,
+        "radius": 44,
+        "rotation": 2
+      },
+      {
+        "type": "text",
+        "content": "Limited Offer",
+        "font": "Montserrat",
+        "fontSize": 78,
+        "color": "#0f172a",
+        "x": 90,
+        "y": 252,
+        "width": 900,
+        "align": "left",
+        "weight": 700
+      },
+      {
+        "type": "text",
+        "content": "Swipe for details",
+        "font": "Poppins",
+        "fontSize": 42,
+        "color": "#ffffff",
+        "x": 90,
+        "y": 1472,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "emoji",
+        "content": "🔥",
+        "size": 88,
+        "x": 130,
+        "y": 145
+      },
+      {
+        "type": "image",
+        "role": "photo",
+        "src": "",
+        "width": 860,
+        "height": 760,
+        "x": 110,
+        "y": 560,
+        "rotation": 0
+      },
+      {
+        "type": "shape",
+        "color": "#0f172a",
+        "opacity": 0.28,
+        "x": 70,
+        "y": 1400,
+        "width": 940,
+        "height": 340,
+        "radius": 34,
+        "rotation": 0
+      },
+      {
+        "type": "text",
+        "content": "DM for link",
+        "font": "Montserrat",
+        "fontSize": 48,
+        "color": "#ffffff",
+        "x": 120,
+        "y": 1580,
+        "width": 840,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/sparkles.svg",
+        "width": 180,
+        "height": 180,
+        "x": 820,
+        "y": 1340,
+        "rotation": 10
+      }
+    ]
+  },
+  {
+    "id": "promotional_03",
+    "category": "promotional",
+    "name": "Promotional Template 03",
+    "background": "/story_templates/custom/backgrounds/bg_058.jpg",
+    "overlay": "rgba(15, 23, 42, 0.28)",
+    "elements": [
+      {
+        "type": "shape",
+        "color": "#ffffff",
+        "opacity": 0.46,
+        "x": 70,
+        "y": 194,
+        "width": 940,
+        "height": 310,
+        "radius": 44,
+        "rotation": -2
+      },
+      {
+        "type": "text",
+        "content": "Swipe Up",
+        "font": "Poppins",
+        "fontSize": 78,
+        "color": "#0f172a",
+        "x": 90,
+        "y": 264,
+        "width": 900,
+        "align": "left",
+        "weight": 700
+      },
+      {
+        "type": "text",
+        "content": "Reply now",
+        "font": "Poppins",
+        "fontSize": 42,
+        "color": "#ffffff",
+        "x": 90,
+        "y": 1484,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "emoji",
+        "content": "🔥",
+        "size": 88,
+        "x": 130,
+        "y": 145
+      },
+      {
+        "type": "image",
+        "role": "photo",
+        "src": "",
+        "width": 860,
+        "height": 760,
+        "x": 110,
+        "y": 560,
+        "rotation": 0
+      },
+      {
+        "type": "shape",
+        "color": "#0f172a",
+        "opacity": 0.28,
+        "x": 70,
+        "y": 1400,
+        "width": 940,
+        "height": 340,
+        "radius": 34,
+        "rotation": 0
+      },
+      {
+        "type": "text",
+        "content": "Join today",
+        "font": "Montserrat",
+        "fontSize": 48,
+        "color": "#ffffff",
+        "x": 120,
+        "y": 1580,
+        "width": 840,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/sparkles.svg",
+        "width": 180,
+        "height": 180,
+        "x": 820,
+        "y": 1340,
+        "rotation": 10
+      }
+    ]
+  },
+  {
+    "id": "promotional_04",
+    "category": "promotional",
+    "name": "Promotional Template 04",
+    "background": "/story_templates/custom/backgrounds/bg_059.jpg",
+    "overlay": "rgba(15, 23, 42, 0.28)",
+    "elements": [
+      {
+        "type": "shape",
+        "color": "#ffffff",
+        "opacity": 0.46,
+        "x": 70,
+        "y": 206,
+        "width": 940,
+        "height": 310,
+        "radius": 44,
+        "rotation": 2
+      },
+      {
+        "type": "text",
+        "content": "Early Access Live",
+        "font": "Bebas Neue",
+        "fontSize": 78,
+        "color": "#0f172a",
+        "x": 90,
+        "y": 276,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "text",
+        "content": "DM for link",
+        "font": "Poppins",
+        "fontSize": 42,
+        "color": "#ffffff",
+        "x": 90,
+        "y": 1460,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "emoji",
+        "content": "🔥",
+        "size": 88,
+        "x": 130,
+        "y": 145
+      },
+      {
+        "type": "image",
+        "role": "photo",
+        "src": "",
+        "width": 860,
+        "height": 760,
+        "x": 110,
+        "y": 560,
+        "rotation": 0
+      },
+      {
+        "type": "shape",
+        "color": "#0f172a",
+        "opacity": 0.28,
+        "x": 70,
+        "y": 1400,
+        "width": 940,
+        "height": 340,
+        "radius": 34,
+        "rotation": 0
+      },
+      {
+        "type": "text",
+        "content": "Tap to view",
+        "font": "Montserrat",
+        "fontSize": 48,
+        "color": "#ffffff",
+        "x": 120,
+        "y": 1580,
+        "width": 840,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/sparkles.svg",
+        "width": 180,
+        "height": 180,
+        "x": 820,
+        "y": 1340,
+        "rotation": 10
+      }
+    ]
+  },
+  {
+    "id": "promotional_05",
+    "category": "promotional",
+    "name": "Promotional Template 05",
+    "background": "/story_templates/custom/backgrounds/bg_060.jpg",
+    "overlay": "rgba(15, 23, 42, 0.28)",
+    "elements": [
+      {
+        "type": "shape",
+        "color": "#ffffff",
+        "opacity": 0.46,
+        "x": 70,
+        "y": 218,
+        "width": 940,
+        "height": 310,
+        "radius": 44,
+        "rotation": -2
+      },
+      {
+        "type": "text",
+        "content": "Shop the launch now",
+        "font": "Montserrat",
+        "fontSize": 78,
+        "color": "#0f172a",
+        "x": 90,
+        "y": 288,
+        "width": 900,
+        "align": "left",
+        "weight": 700
+      },
+      {
+        "type": "text",
+        "content": "Join today",
+        "font": "Poppins",
+        "fontSize": 42,
+        "color": "#ffffff",
+        "x": 90,
+        "y": 1472,
+        "width": 900,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "emoji",
+        "content": "🔥",
+        "size": 88,
+        "x": 130,
+        "y": 145
+      },
+      {
+        "type": "image",
+        "role": "photo",
+        "src": "",
+        "width": 860,
+        "height": 760,
+        "x": 110,
+        "y": 560,
+        "rotation": 0
+      },
+      {
+        "type": "shape",
+        "color": "#0f172a",
+        "opacity": 0.28,
+        "x": 70,
+        "y": 1400,
+        "width": 940,
+        "height": 340,
+        "radius": 34,
+        "rotation": 0
+      },
+      {
+        "type": "text",
+        "content": "Swipe for details",
+        "font": "Montserrat",
+        "fontSize": 48,
+        "color": "#ffffff",
+        "x": 120,
+        "y": 1580,
+        "width": 840,
+        "align": "center",
+        "weight": 700
+      },
+      {
+        "type": "image",
+        "src": "/story_templates/birthday/sparkles.svg",
+        "width": 180,
+        "height": 180,
+        "x": 820,
+        "y": 1340,
+        "rotation": 10
+      }
+    ]
+  }
+]

@@ -1,0 +1,422 @@
+[
+  {
+    "id": "custom-bg-001",
+    "name": "confetti",
+    "category": "Birthday",
+    "src": "/story_templates/custom/backgrounds/bg_001.svg",
+    "source": "assets/birthday_templates/confetti.svg"
+  },
+  {
+    "id": "custom-bg-002",
+    "name": "darkmoon_art-date-of-birth-2016081_1920",
+    "category": "Birthday",
+    "src": "/story_templates/custom/backgrounds/bg_002.jpg",
+    "source": "assets/birthday_templates/darkmoon_art-date-of-birth-2016081_1920.jpg"
+  },
+  {
+    "id": "custom-bg-003",
+    "name": "joseph-menjivar-aTHv2s8PRyo-unsplash",
+    "category": "Birthday",
+    "src": "/story_templates/custom/backgrounds/bg_003.jpg",
+    "source": "assets/birthday_templates/joseph-menjivar-aTHv2s8PRyo-unsplash.jpg"
+  },
+  {
+    "id": "custom-bg-004",
+    "name": "jpg(2)",
+    "category": "Birthday",
+    "src": "/story_templates/custom/backgrounds/bg_004.jpg",
+    "source": "assets/birthday_templates/jpg(2)"
+  },
+  {
+    "id": "custom-bg-005",
+    "name": "jpg(3)",
+    "category": "Birthday",
+    "src": "/story_templates/custom/backgrounds/bg_005.jpg",
+    "source": "assets/birthday_templates/jpg(3)"
+  },
+  {
+    "id": "custom-bg-006",
+    "name": "jpg(4)",
+    "category": "Birthday",
+    "src": "/story_templates/custom/backgrounds/bg_006.jpg",
+    "source": "assets/birthday_templates/jpg(4)"
+  },
+  {
+    "id": "custom-bg-007",
+    "name": "jpg(5)",
+    "category": "Birthday",
+    "src": "/story_templates/custom/backgrounds/bg_007.jpg",
+    "source": "assets/birthday_templates/jpg(5)"
+  },
+  {
+    "id": "custom-bg-008",
+    "name": "pexels-cottonbro-3825294",
+    "category": "Birthday",
+    "src": "/story_templates/custom/backgrounds/bg_008.jpg",
+    "source": "assets/birthday_templates/pexels-cottonbro-3825294.jpg"
+  },
+  {
+    "id": "custom-bg-009",
+    "name": "pexels-cottonbro-4684169",
+    "category": "Birthday",
+    "src": "/story_templates/custom/backgrounds/bg_009.jpg",
+    "source": "assets/birthday_templates/pexels-cottonbro-4684169.jpg"
+  },
+  {
+    "id": "custom-bg-010",
+    "name": "pexels-goran-dojcinovic-1793126-16032215",
+    "category": "Birthday",
+    "src": "/story_templates/custom/backgrounds/bg_010.jpg",
+    "source": "assets/birthday_templates/pexels-goran-dojcinovic-1793126-16032215.jpg"
+  },
+  {
+    "id": "custom-bg-011",
+    "name": "⚘𝑯𝒖̽𝒓̽𝒊𝒊⚘⤾",
+    "category": "Birthday",
+    "src": "/story_templates/custom/backgrounds/bg_011.jpg",
+    "source": "assets/birthday_templates/⚘𝑯𝒖̽𝒓̽𝒊𝒊⚘⤾.jpg"
+  },
+  {
+    "id": "custom-bg-012",
+    "name": "4K Wallpaper __ Tom Wallpaper __ Cartoon Wallpaper __ Wallpaper For Mobile",
+    "category": "General",
+    "src": "/story_templates/custom/backgrounds/bg_012.jpg",
+    "source": "assets/story_templates/backgrounds/4K Wallpaper __ Tom Wallpaper __ Cartoon Wallpaper __ Wallpaper For Mobile.jpg"
+  },
+  {
+    "id": "custom-bg-013",
+    "name": "4K Wallpaper cat meme",
+    "category": "General",
+    "src": "/story_templates/custom/backgrounds/bg_013.jpg",
+    "source": "assets/story_templates/backgrounds/4K Wallpaper cat meme.jpg"
+  },
+  {
+    "id": "custom-bg-014",
+    "name": "Simple doodles brighten your phone screen today",
+    "category": "General",
+    "src": "/story_templates/custom/backgrounds/bg_014.jpg",
+    "source": "assets/story_templates/backgrounds/Simple doodles brighten your phone screen today.jpg"
+  },
+  {
+    "id": "custom-bg-015",
+    "name": "aesthetic_bg_1",
+    "category": "General",
+    "src": "/story_templates/custom/backgrounds/bg_015.svg",
+    "source": "assets/story_templates/backgrounds/aesthetic_bg_1.svg"
+  },
+  {
+    "id": "custom-bg-016",
+    "name": "aesthetic_bg_2",
+    "category": "General",
+    "src": "/story_templates/custom/backgrounds/bg_016.svg",
+    "source": "assets/story_templates/backgrounds/aesthetic_bg_2.svg"
+  },
+  {
+    "id": "custom-bg-017",
+    "name": "aesthetic_bg_3",
+    "category": "General",
+    "src": "/story_templates/custom/backgrounds/bg_017.svg",
+    "source": "assets/story_templates/backgrounds/aesthetic_bg_3.svg"
+  },
+  {
+    "id": "custom-bg-018",
+    "name": "annie-spratt-wuc-KEIBrdE-unsplash",
+    "category": "General",
+    "src": "/story_templates/custom/backgrounds/bg_018.jpg",
+    "source": "assets/story_templates/backgrounds/annie-spratt-wuc-KEIBrdE-unsplash.jpg"
+  },
+  {
+    "id": "custom-bg-019",
+    "name": "badun-tulips-8205190_1920",
+    "category": "General",
+    "src": "/story_templates/custom/backgrounds/bg_019.jpg",
+    "source": "assets/story_templates/backgrounds/badun-tulips-8205190_1920.jpg"
+  },
+  {
+    "id": "custom-bg-020",
+    "name": "birthday_bg_1",
+    "category": "General",
+    "src": "/story_templates/custom/backgrounds/bg_020.svg",
+    "source": "assets/story_templates/backgrounds/birthday_bg_1.svg"
+  },
+  {
+    "id": "custom-bg-021",
+    "name": "birthday_bg_2",
+    "category": "General",
+    "src": "/story_templates/custom/backgrounds/bg_021.svg",
+    "source": "assets/story_templates/backgrounds/birthday_bg_2.svg"
+  },
+  {
+    "id": "custom-bg-022",
+    "name": "birthday_bg_3",
+    "category": "General",
+    "src": "/story_templates/custom/backgrounds/bg_022.svg",
+    "source": "assets/story_templates/backgrounds/birthday_bg_3.svg"
+  },
+  {
+    "id": "custom-bg-023",
+    "name": "bunga indah",
+    "category": "General",
+    "src": "/story_templates/custom/backgrounds/bg_023.jpg",
+    "source": "assets/story_templates/backgrounds/bunga indah.jpg"
+  },
+  {
+    "id": "custom-bg-024",
+    "name": "diego-ph-OiqQwDHYOEU-unsplash",
+    "category": "General",
+    "src": "/story_templates/custom/backgrounds/bg_024.jpg",
+    "source": "assets/story_templates/backgrounds/diego-ph-OiqQwDHYOEU-unsplash.jpg"
+  },
+  {
+    "id": "custom-bg-025",
+    "name": "ella-christenson-mkTWuHfUAqY-unsplash",
+    "category": "General",
+    "src": "/story_templates/custom/backgrounds/bg_025.jpg",
+    "source": "assets/story_templates/backgrounds/ella-christenson-mkTWuHfUAqY-unsplash.jpg"
+  },
+  {
+    "id": "custom-bg-026",
+    "name": "engagement_bg_1",
+    "category": "General",
+    "src": "/story_templates/custom/backgrounds/bg_026.svg",
+    "source": "assets/story_templates/backgrounds/engagement_bg_1.svg"
+  },
+  {
+    "id": "custom-bg-027",
+    "name": "engagement_bg_2",
+    "category": "General",
+    "src": "/story_templates/custom/backgrounds/bg_027.svg",
+    "source": "assets/story_templates/backgrounds/engagement_bg_2.svg"
+  },
+  {
+    "id": "custom-bg-028",
+    "name": "grace-brauteseth-FE796-oYIAs-unsplash",
+    "category": "General",
+    "src": "/story_templates/custom/backgrounds/bg_028.jpg",
+    "source": "assets/story_templates/backgrounds/grace-brauteseth-FE796-oYIAs-unsplash.jpg"
+  },
+  {
+    "id": "custom-bg-029",
+    "name": "hoyoun-lee-Ai-gOjPMVTM-unsplash",
+    "category": "General",
+    "src": "/story_templates/custom/backgrounds/bg_029.jpg",
+    "source": "assets/story_templates/backgrounds/hoyoun-lee-Ai-gOjPMVTM-unsplash.jpg"
+  },
+  {
+    "id": "custom-bg-030",
+    "name": "jan_photo-rose-4972773_1920",
+    "category": "General",
+    "src": "/story_templates/custom/backgrounds/bg_030.jpg",
+    "source": "assets/story_templates/backgrounds/jan_photo-rose-4972773_1920.jpg"
+  },
+  {
+    "id": "custom-bg-031",
+    "name": "jpg",
+    "category": "General",
+    "src": "/story_templates/custom/backgrounds/bg_031.jpg",
+    "source": "assets/story_templates/backgrounds/jpg"
+  },
+  {
+    "id": "custom-bg-032",
+    "name": "jpg(1)",
+    "category": "General",
+    "src": "/story_templates/custom/backgrounds/bg_032.jpg",
+    "source": "assets/story_templates/backgrounds/jpg(1)"
+  },
+  {
+    "id": "custom-bg-033",
+    "name": "jpg(6)",
+    "category": "General",
+    "src": "/story_templates/custom/backgrounds/bg_033.jpg",
+    "source": "assets/story_templates/backgrounds/jpg(6)"
+  },
+  {
+    "id": "custom-bg-034",
+    "name": "jpg(7)",
+    "category": "General",
+    "src": "/story_templates/custom/backgrounds/bg_034.jpg",
+    "source": "assets/story_templates/backgrounds/jpg(7)"
+  },
+  {
+    "id": "custom-bg-035",
+    "name": "jpg(8)",
+    "category": "General",
+    "src": "/story_templates/custom/backgrounds/bg_035.jpg",
+    "source": "assets/story_templates/backgrounds/jpg(8)"
+  },
+  {
+    "id": "custom-bg-036",
+    "name": "jpg(9)",
+    "category": "General",
+    "src": "/story_templates/custom/backgrounds/bg_036.jpg",
+    "source": "assets/story_templates/backgrounds/jpg(9)"
+  },
+  {
+    "id": "custom-bg-037",
+    "name": "malik-shibly-6m06-IR_BLs-unsplash",
+    "category": "General",
+    "src": "/story_templates/custom/backgrounds/bg_037.jpg",
+    "source": "assets/story_templates/backgrounds/malik-shibly-6m06-IR_BLs-unsplash.jpg"
+  },
+  {
+    "id": "custom-bg-038",
+    "name": "marco-d-abramo-Txuwv5NjTDw-unsplash",
+    "category": "General",
+    "src": "/story_templates/custom/backgrounds/bg_038.jpg",
+    "source": "assets/story_templates/backgrounds/marco-d-abramo-Txuwv5NjTDw-unsplash.jpg"
+  },
+  {
+    "id": "custom-bg-039",
+    "name": "minimal_bg_1",
+    "category": "General",
+    "src": "/story_templates/custom/backgrounds/bg_039.svg",
+    "source": "assets/story_templates/backgrounds/minimal_bg_1.svg"
+  },
+  {
+    "id": "custom-bg-040",
+    "name": "minimal_bg_2",
+    "category": "General",
+    "src": "/story_templates/custom/backgrounds/bg_040.svg",
+    "source": "assets/story_templates/backgrounds/minimal_bg_2.svg"
+  },
+  {
+    "id": "custom-bg-041",
+    "name": "minimal_bg_3",
+    "category": "General",
+    "src": "/story_templates/custom/backgrounds/bg_041.svg",
+    "source": "assets/story_templates/backgrounds/minimal_bg_3.svg"
+  },
+  {
+    "id": "custom-bg-042",
+    "name": "morning",
+    "category": "General",
+    "src": "/story_templates/custom/backgrounds/bg_042.jpg",
+    "source": "assets/story_templates/backgrounds/morning.jpg"
+  },
+  {
+    "id": "custom-bg-043",
+    "name": "pexels-eberhardgross-2088208",
+    "category": "General",
+    "src": "/story_templates/custom/backgrounds/bg_043.jpg",
+    "source": "assets/story_templates/backgrounds/pexels-eberhardgross-2088208.jpg"
+  },
+  {
+    "id": "custom-bg-044",
+    "name": "pexels-eberhardgross-2310713",
+    "category": "General",
+    "src": "/story_templates/custom/backgrounds/bg_044.jpg",
+    "source": "assets/story_templates/backgrounds/pexels-eberhardgross-2310713.jpg"
+  },
+  {
+    "id": "custom-bg-045",
+    "name": "poll_bg_1",
+    "category": "General",
+    "src": "/story_templates/custom/backgrounds/bg_045.svg",
+    "source": "assets/story_templates/backgrounds/poll_bg_1.svg"
+  },
+  {
+    "id": "custom-bg-046",
+    "name": "poll_bg_2",
+    "category": "General",
+    "src": "/story_templates/custom/backgrounds/bg_046.svg",
+    "source": "assets/story_templates/backgrounds/poll_bg_2.svg"
+  },
+  {
+    "id": "custom-bg-047",
+    "name": "promo_bg_1",
+    "category": "General",
+    "src": "/story_templates/custom/backgrounds/bg_047.svg",
+    "source": "assets/story_templates/backgrounds/promo_bg_1.svg"
+  },
+  {
+    "id": "custom-bg-048",
+    "name": "promo_bg_2",
+    "category": "General",
+    "src": "/story_templates/custom/backgrounds/bg_048.svg",
+    "source": "assets/story_templates/backgrounds/promo_bg_2.svg"
+  },
+  {
+    "id": "custom-bg-049",
+    "name": "promo_bg_3",
+    "category": "General",
+    "src": "/story_templates/custom/backgrounds/bg_049.svg",
+    "source": "assets/story_templates/backgrounds/promo_bg_3.svg"
+  },
+  {
+    "id": "custom-bg-050",
+    "name": "quote_bg_1",
+    "category": "General",
+    "src": "/story_templates/custom/backgrounds/bg_050.svg",
+    "source": "assets/story_templates/backgrounds/quote_bg_1.svg"
+  },
+  {
+    "id": "custom-bg-051",
+    "name": "quote_bg_2",
+    "category": "General",
+    "src": "/story_templates/custom/backgrounds/bg_051.svg",
+    "source": "assets/story_templates/backgrounds/quote_bg_2.svg"
+  },
+  {
+    "id": "custom-bg-052",
+    "name": "romello-williams-P8VMwYFY-Es-unsplash",
+    "category": "General",
+    "src": "/story_templates/custom/backgrounds/bg_052.jpg",
+    "source": "assets/story_templates/backgrounds/romello-williams-P8VMwYFY-Es-unsplash.jpg"
+  },
+  {
+    "id": "custom-bg-053",
+    "name": "sky",
+    "category": "General",
+    "src": "/story_templates/custom/backgrounds/bg_053.jpg",
+    "source": "assets/story_templates/backgrounds/sky.jpg"
+  },
+  {
+    "id": "custom-bg-054",
+    "name": "van Gogh x Jd",
+    "category": "General",
+    "src": "/story_templates/custom/backgrounds/bg_054.jpg",
+    "source": "assets/story_templates/backgrounds/van Gogh x Jd.jpg"
+  },
+  {
+    "id": "custom-bg-055",
+    "name": "yiyiphotos-flowers-4492549_1920",
+    "category": "General",
+    "src": "/story_templates/custom/backgrounds/bg_055.jpg",
+    "source": "assets/story_templates/backgrounds/yiyiphotos-flowers-4492549_1920.jpg"
+  },
+  {
+    "id": "custom-bg-056",
+    "name": "Corporate Recruitment Advertising Background Illustration Poster Background Template Wallpaper Image For Free Download - Pngtree",
+    "category": "General",
+    "src": "/story_templates/custom/backgrounds/bg_056.jpg",
+    "source": "assets/story_templates/backgrounds/Corporate Recruitment Advertising Background Illustration Poster Background Template Wallpaper Image For Free Download - Pngtree.jpg"
+  },
+  {
+    "id": "custom-bg-057",
+    "name": "jpg(10)",
+    "category": "General",
+    "src": "/story_templates/custom/backgrounds/bg_057.jpg",
+    "source": "assets/story_templates/backgrounds/jpg(10)"
+  },
+  {
+    "id": "custom-bg-058",
+    "name": "jpg(11)",
+    "category": "General",
+    "src": "/story_templates/custom/backgrounds/bg_058.jpg",
+    "source": "assets/story_templates/backgrounds/jpg(11)"
+  },
+  {
+    "id": "custom-bg-059",
+    "name": "jpg(12)",
+    "category": "General",
+    "src": "/story_templates/custom/backgrounds/bg_059.jpg",
+    "source": "assets/story_templates/backgrounds/jpg(12)"
+  },
+  {
+    "id": "custom-bg-060",
+    "name": "jpg(13)",
+    "category": "General",
+    "src": "/story_templates/custom/backgrounds/bg_060.jpg",
+    "source": "assets/story_templates/backgrounds/jpg(13)"
+  }
+]

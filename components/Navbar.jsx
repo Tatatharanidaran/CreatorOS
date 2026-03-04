@@ -8,7 +8,9 @@ const LINKS = [
   { href: '/', label: 'Home' },
   { href: '/caption', label: 'Caption Generator' },
   { href: '/thumbnail', label: 'Thumbnail Creator' },
-  { href: '/carousel', label: 'Carousel Builder' }
+  { href: '/carousel', label: 'Carousel Builder' },
+  { href: '/story', label: 'Story Creator' },
+  { href: '/reels', label: 'Reels Planner' }
 ];
 
 export default function Navbar() {

@@ -56,3 +56,84 @@ Version 1.4 - Carousel Builder Upgrade
 
 - Slide export workflow:
   Users can export current slide or all slides as PNG files with ordered filenames, while drag-and-drop slide strip controls export order.
+
+Version 1.5 - Stories & Reels Toolkit
+
+- Story template system:
+  Added a Story Creator with editable template library (announcement, quote, question, poll, minimal, promotion) plus birthday-specific templates.
+
+- Birthday template design:
+  Added birthday-focused presets with festive gradients and emoji decorations (🎉 🎂 🎈 🥳 🎁 ✨ 💖) and local template assets.
+
+- Emoji asset system:
+  Added selectable emoji decorations that render as movable decorative elements in the story editor preview.
+
+- Reels idea generation:
+  Added Reels Planner with Groq-powered idea generation from topic, niche, and tone.
+
+- Script and shot list logic:
+  Added structured script generation (hook/body/value/cta), shot-list planning, and caption + hashtag generation for selected reel ideas.
+
+Version 1.6 - Story Template Asset System
+
+- Decorative asset system:
+  Added a reusable story asset loader and curated decorative packs (balloons, confetti, cake, gift, party hat, sparkles) with local files in assets/story_templates/birthday and runtime usage via public story template paths.
+
+- Birthday template collection:
+  Expanded Story Creator with a dedicated Birthday Story Templates category including Birthday Wish, Funny Birthday, Aesthetic Birthday, Friend Birthday, and Birthday Countdown layouts, each combining background images, decorative assets, emoji accents, and shape overlays.
+
+- Image removal functionality:
+  Added image layer selection with right-panel controls for Replace Image and Remove Image; removing the image restores the placeholder so users can upload a new photo immediately.
+
+- Asset loading logic:
+  Introduced modular asset/background registries and template-decoration mapping logic to keep template metadata clean, support panel-driven asset insertion, and ensure story canvas exports include all visual layers (background, shapes, user image, decorative assets, text, emojis).
+
+Version 1.7 - JSON Template Engine
+
+- Template JSON architecture:
+  Added a data-driven story template library at templates/storyTemplates.json with 50 templates across birthday, aesthetic, minimal, quote, poll, engagement, and promotional categories. Each template is defined through JSON elements (text, image, emoji, shape) so new templates can be added without hardcoding React components.
+
+- Asset loading system:
+  Added reusable template loading utilities in utils/templateLoader.js to read JSON templates, expose category metadata, and map JSON element definitions into the Story editor layer model (background, editable text, emojis, decorative assets, shape overlays, and primary photo placeholder).
+
+- Canvas rendering workflow:
+  Added StoryTemplateRenderer to render JSON-derived layers onto the Story canvas with full edit support (drag, resize, rotate, remove, text edit, image replace/remove) while preserving client-side HTML5 canvas export flow.
+
+- Template category filtering:
+  Updated StoryTemplatePicker with category filters and preview cards so users can browse templates by Birthday, Aesthetic, Minimal, Quote, Poll, Engagement, and Promo before applying them to the editor.
+
+Version 1.7.1 - Real Image Background Injection
+
+- Local image adoption:
+  Integrated newly added JPG backgrounds from assets/story_templates/backgrounds into public/story_templates/backgrounds so Story templates can load actual photographic backgrounds at runtime.
+
+- JSON mapping refresh:
+  Updated templates/storyTemplates.json so all 50 templates now rotate through real image backgrounds by category, with tuned overlays for readability.
+
+- Asset panel enrichment:
+  Extended background asset registry with new JPG entries to make the freshly added visuals selectable from the Story asset panel.
+
+Version 1.7.2 - Unified Custom Background Library
+
+- Full image ingestion:
+  Collected newly added images from assets/birthday_templates and assets/story_templates/backgrounds, normalized filenames, and published them into a unified runtime folder at public/story_templates/custom/backgrounds.
+
+- User-accessible custom pool:
+  Added templates/customBackgrounds.json as a manifest so all available backgrounds can be surfaced in the Story background asset panel for custom-template workflows.
+
+- No-repeat template mapping:
+  Reassigned templates/storyTemplates.json backgrounds to ensure 50 templates use 50 unique backgrounds with zero repetition, while keeping birthday templates sourced from birthday assets.
+
+- Asset loader refactor:
+  Updated utils/assetLoader.js to read background assets from the JSON manifest, so any future image drop-ins can be integrated through the same pipeline.
+
+Version 1.7.3 - Promotional Background Sync
+
+- New image ingestion:
+  Detected newly added background images and appended them to the custom background manifest, publishing copies into both public/story_templates/custom/backgrounds and assets/story_templates/custom/backgrounds.
+
+- Promotional mapping:
+  Updated promotional templates to use the newly added promotional images directly, one unique background per template with no repetition.
+
+- Runtime availability:
+  Because the loader is manifest-driven, new promotional images are now also available in the Backgrounds asset panel for custom template creation by end users.
